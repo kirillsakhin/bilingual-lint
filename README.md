@@ -125,6 +125,7 @@ shown as warnings.
 bilingual-lint check FILE [FILE]
   --langs en,es         name the two languages (needed when they share a script)
   --glossary terms.yaml term pairs to enforce:  - {en: Buyer, ru: Покупатель}
+  --config FILE         use this config file instead of ./.bilingual-lint.yaml
   --format console|json|md
   --output report.json
   --fail-on error|warning
