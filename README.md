@@ -87,8 +87,8 @@ a translation step.
 |---|---|---|---|
 | BI000 | Notes about the file: tracked changes, comments, text outside the bilingual table | info | any |
 | BI001 | A number or percentage appears on one side only | error | any |
-| BI002 | A money amount or its currency differs | error | any |
-| BI003 | A date differs, or agrees only under one day/month reading (`02/03/2025`) | error | any |
+| BI002 | A money amount or its currency differs, or the two sides name different currencies | error | any |
+| BI003 | A date or a time of day differs, or a date agrees only under one day/month reading (`02/03/2025`) | error | any |
 | BI004 | Digits and words disagree on the same side: `ten (15)` | error | en, ru |
 | BI005 | A time period differs in length, unit or day type (30 days vs 30 business days) | error | en, ru |
 | BI006 | A clause number or cross-reference differs | warning | any |

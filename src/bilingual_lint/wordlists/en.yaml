@@ -43,7 +43,7 @@ months:
   nov: 11
   december: 12
   dec: 12
-ref_keywords: ['sub-?clauses?', 'clauses?', 'sections?', 'articles?', 'paragraphs?', 'items?']
+ref_keywords: ['sub-?clauses?', 'sub-?paragraphs?', 'clauses?', 'sections?', 'articles?', 'paragraphs?', 'items?']
 number_words:
   values:
     zero: 0
@@ -81,10 +81,12 @@ number_words:
     billion: 1000000000
   fillers: [and]
 modality:
-  obligation: ['shall', 'must', 'is\s+obliged\s+to', 'are\s+obliged\s+to', 'undertakes?', 'is\s+required\s+to']
-  permission: ['may', 'is\s+entitled\s+to', 'are\s+entitled\s+to', 'has\s+the\s+right', 'have\s+the\s+right']
-  # "No. 15" is a number sign, not a negation
-  negation: ['not', 'no(?!\.\s?\d)', 'never', 'neither', 'nor', 'cannot', 'without']
+  # "shall be entitled to" grants a right; it is not an obligation
+  obligation: ['shall(?!\s+(?:be\s+entitled|have\s+the\s+right))', 'must', 'is\s+obliged\s+to', 'are\s+obliged\s+to', 'undertakes?', 'is\s+required\s+to']
+  permission: ['may', 'shall\s+be\s+entitled', 'shall\s+have\s+the\s+right', 'is\s+entitled\s+to', 'are\s+entitled\s+to', 'has\s+the\s+right', 'have\s+the\s+right']
+  # "No. 15", "No 1" and "No. A40-1" are number signs, not negations
+  negation: ['not', 'no(?!\.\s?\S)(?!\s?\d)', 'never', 'neither', 'nor', 'cannot', 'without',
+             'unless', 'absence', 'absent', 'lack', 'lacks', 'lacking']
 prevailing:
   cues: ['prevail\w*', 'take\s+precedence', 'takes\s+precedence', 'controlling', 'shall\s+govern', 'shall\s+control']
   equal: ['equal\s+legal\s+force', 'equally\s+authentic', 'equal\s+force', 'equally\s+binding']

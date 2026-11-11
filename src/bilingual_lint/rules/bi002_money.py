@@ -16,6 +16,16 @@ class AmountsDiffer:
         severity = severity_of(cfg)
         for pair in doc.complete_pairs():
             matched, _, _ = unmatched_quantities(pair)
+            # a currency named without an amount ("payable in euros")
+            named_a, named_b = pair.facts_a.currencies, pair.facts_b.currencies
+            has_money = any(q.kind == "money" for q in
+                            pair.facts_a.quantities + pair.facts_b.quantities)
+            if not has_money and named_a and named_b and named_a != named_b:
+                out.append(Finding(
+                    self.id, soften(severity),
+                    f"currencies named differ — {doc.lang_a}: {', '.join(sorted(named_a))}"
+                    f" · {doc.lang_b}: {', '.join(sorted(named_b))}", pair,
+                    {"a": sorted(named_a), "b": sorted(named_b)}))
             for qa, qb in matched:
                 if qa.kind == "money" and qb.kind == "money":
                     if qa.unit != qb.unit:

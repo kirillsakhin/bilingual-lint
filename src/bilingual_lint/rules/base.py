@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections import Counter
 from typing import Protocol, runtime_checkable
 
 from ..facts.numbers import match_quantities
@@ -44,6 +45,31 @@ def unmatched_quantities(pair: Pair) -> tuple[list, list, list]:
     return matched, only_a, only_b
 
 
+def _cancel(quantities: list, refs: Counter) -> list:
+    left = []
+    for q in quantities:
+        if q.kind == "number" and refs[q.raw] > 0:
+            refs[q.raw] -= 1
+        else:
+            left.append(q)
+    return left
+
+
+def reconcile(pair: Pair) -> tuple[list, list, list, list]:
+    """(quantities only on a, only on b, references only on a, only on b).
+
+    'article 5' on one side and a bare '5' on the other carry the same value:
+    one side merely words the reference in a way the wordlist does not know.
+    Such a pair is cancelled, so neither rule reports it."""
+    _, only_a, only_b = unmatched_quantities(pair)
+    refs_a, refs_b = Counter(pair.facts_a.refs), Counter(pair.facts_b.refs)
+    ref_only_a, ref_only_b = refs_a - refs_b, refs_b - refs_a
+    only_a = _cancel(only_a, ref_only_b)
+    only_b = _cancel(only_b, ref_only_a)
+    return (only_a, only_b, sorted(ref_only_a.elements()),
+            sorted(ref_only_b.elements()))
+
+
 def describe(doc: Document, items_a: list, items_b: list) -> str:
     parts = []
     if items_a:
@@ -58,7 +84,7 @@ def value_findings(doc: Document, cfg: dict, rule_id: str, kinds: tuple,
     """One finding per pair whose quantities of the given kinds do not match."""
     out = []
     for pair in doc.complete_pairs():
-        _, only_a, only_b = unmatched_quantities(pair)
+        only_a, only_b, _, _ = reconcile(pair)
         raw_a = [q.raw for q in only_a if q.kind in kinds]
         raw_b = [q.raw for q in only_b if q.kind in kinds]
         if raw_a or raw_b:

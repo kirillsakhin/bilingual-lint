@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from collections import Counter
+
 from ..facts.dates import match_dates
 from ..models import Document, Finding, Severity
 from .base import describe, severity_of, soften
@@ -8,7 +10,7 @@ from .base import describe, severity_of, soften
 class DatesDiffer:
     id = "BI003"
     name = "dates"
-    description = "a date differs, or agrees only under one day/month reading"
+    description = "a date or time differs, or a date agrees only under one day/month reading"
     default_severity = Severity.ERROR
     needs_wordlists = False
 
@@ -21,6 +23,15 @@ class DatesDiffer:
                 raw_a, raw_b = [d.raw for d in only_a], [d.raw for d in only_b]
                 out.append(Finding(
                     self.id, severity, f"dates differ — {describe(doc, raw_a, raw_b)}",
+                    pair, {"only_a": raw_a, "only_b": raw_b}))
+            times_a = Counter(t.value for t in pair.facts_a.times)
+            times_b = Counter(t.value for t in pair.facts_b.times)
+            if times_a != times_b:
+                extra_a, extra_b = times_a - times_b, times_b - times_a
+                raw_a = [t.raw for t in pair.facts_a.times if extra_a[t.value]]
+                raw_b = [t.raw for t in pair.facts_b.times if extra_b[t.value]]
+                out.append(Finding(
+                    self.id, severity, f"times differ — {describe(doc, raw_a, raw_b)}",
                     pair, {"only_a": raw_a, "only_b": raw_b}))
             for da, db in ambiguous:
                 out.append(Finding(

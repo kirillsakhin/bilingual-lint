@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-from collections import Counter
-
 from ..models import Document, Finding, Severity
-from .base import describe, severity_of
+from .base import describe, reconcile, severity_of
 
 
 class ReferencesDiffer:
@@ -22,10 +20,8 @@ class ReferencesDiffer:
                     self.id, severity_of(cfg),
                     f"clause number differs — {doc.lang_a}: {lead_a or 'none'} · "
                     f"{doc.lang_b}: {lead_b or 'none'}", pair, {"a": lead_a, "b": lead_b}))
-            refs_a, refs_b = Counter(pair.facts_a.refs), Counter(pair.facts_b.refs)
-            if refs_a != refs_b:
-                only_a = sorted((refs_a - refs_b).elements())
-                only_b = sorted((refs_b - refs_a).elements())
+            _, _, only_a, only_b = reconcile(pair)
+            if only_a or only_b:
                 out.append(Finding(
                     self.id, severity_of(cfg),
                     f"cross-references differ — {describe(doc, only_a, only_b)}", pair,

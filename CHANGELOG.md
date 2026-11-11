@@ -13,3 +13,10 @@ First version.
 - Language-neutral rules for any pair; word-based rules for English and Russian.
 - Console, JSON and Markdown reports; exit codes for use as a pipeline gate.
 - Optional model pass (`--llm`) for pairs the rules cannot settle. Off by default.
+- After a first run over real two-column documents: times of day are compared
+  (`21:00` against `9 p.m.`); a currency named without an amount is compared;
+  a clause reference worded differently on one side no longer reads as a
+  number mismatch; a defined term matches its singular and plural and keeps
+  its capital letter; a Latin name kept on a non-Latin side is not reported as
+  untranslated; fewer false negation and obligation cues (`No. 15`, `unless`,
+  `shall be entitled to`).

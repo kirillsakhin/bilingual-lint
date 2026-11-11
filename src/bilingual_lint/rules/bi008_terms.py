@@ -21,14 +21,28 @@ def definitions(text: str, lang: str) -> list:
     return [term for _, term in sorted(found)]
 
 
+def _word_pattern(word: str, lang: str) -> str:
+    """One word of a term: any ending in an inflected language, singular or
+    plural elsewhere. A term defined with a capital letter keeps it, so
+    "Representative" does not match the common noun "representative"; the
+    rest of the word is matched in any case, so "REPRESENTATIVE" still does."""
+    low = word.lower()
+    if lang in INFLECTED and len(word) >= 5:
+        stem, tail = word[:-2], r"\w*"
+    elif lang not in INFLECTED and len(word) > 4 and low.endswith("ies"):
+        stem, tail = word[:-3], r"(?:y|ies)(?:'s|’s)?"
+    else:
+        plural = (lang not in INFLECTED and len(word) > 3 and low.endswith("s")
+                  and not low.endswith("ss"))
+        stem, tail = (word[:-1] if plural else word), r"(?:s|es)?(?:'s|’s)?"
+    if stem[:1].isupper():
+        return re.escape(stem[0]) + "(?i:" + re.escape(stem[1:]) + tail + ")"
+    return "(?i:" + re.escape(stem) + tail + ")"
+
+
 def term_pattern(term: str, lang: str) -> re.Pattern:
-    pieces = []
-    for word in term.split():
-        if lang in INFLECTED and len(word) >= 5:
-            pieces.append(re.escape(word[:-2]) + r"\w*")
-        else:
-            pieces.append(re.escape(word) + r"(?:s|'s|’s)?")
-    return re.compile(r"(?<!\w)" + r"\s+".join(pieces) + r"(?!\w)", FLAGS)
+    pieces = [_word_pattern(word, lang) for word in term.split()]
+    return re.compile(r"(?<!\w)" + r"\s+".join(pieces) + r"(?!\w)", re.UNICODE)
 
 
 def learn_terms(doc: Document) -> list:

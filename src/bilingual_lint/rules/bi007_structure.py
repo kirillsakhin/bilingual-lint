@@ -1,10 +1,26 @@
 from __future__ import annotations
 
+import re
 from statistics import median
 
 from ..models import Document, Finding, Severity
 from ..text_utils import letters, script_for_lang, script_of
 from .base import severity_of, soften
+
+WORD_RE = re.compile(r"[^\W\d_]+")
+
+
+def _kept_names(text: str, other: str, want: str) -> bool:
+    """True when the side is written in its own script apart from Latin words
+    carried over unchanged from the other side: a bank name, an address, a
+    company name. Text of another script left on a Latin-script side is not
+    excused; that is far more often a missed translation."""
+    if want == "latin":
+        return False
+    words = WORD_RE.findall(text)
+    own = [w for w in words if script_of(w) == want]
+    latin = [w for w in words if script_of(w) == "latin"]
+    return bool(own) and all(w in other for w in latin)
 
 
 class SegmentsDiffer:
@@ -36,9 +52,9 @@ class SegmentsDiffer:
             text_a, text_b = pair.a.text, pair.b.text
             enough = min(letters(text_a), letters(text_b)) >= cfg["untranslated_min_letters"]
             if enough and scripts[0] != scripts[1]:
-                for lang, text, want in ((doc.lang_a, text_a, scripts[0]),
-                                         (doc.lang_b, text_b, scripts[1])):
-                    if script_of(text) != want:
+                for lang, text, other, want in ((doc.lang_a, text_a, text_b, scripts[0]),
+                                                (doc.lang_b, text_b, text_a, scripts[1])):
+                    if script_of(text) != want and not _kept_names(text, other, want):
                         out.append(Finding(
                             self.id, soften(severity),
                             f"text on the {lang} side does not look like {lang} — "

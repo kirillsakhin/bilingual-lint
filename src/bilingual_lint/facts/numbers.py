@@ -12,7 +12,7 @@ from decimal import Decimal
 THIN = "    "
 # digits, optional groups of exactly three after a space or apostrophe,
 # optional groups after a dot or comma
-NUM_PATTERN = (r"(?<![\w.,])\d+(?:[" + THIN + r"'](?=\d{3}(?!\d))\d{3})*"
+NUM_PATTERN = (r"(?<!\w)(?<!\d[.,])\d+(?:[" + THIN + r"'](?=\d{3}(?!\d))\d{3})*"
                r"(?:[.,]\d+)*")
 NUM_RE = re.compile(NUM_PATTERN)
 DECIMAL_SEP = {"en": ".", "ru": ","}
