@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bilingual-lint"
+dynamic = ["version"]
+description = "A linter for bilingual legal documents — find where the two language versions of a contract disagree on numbers, dates, amounts, clauses and the prevailing language"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Kirill Sakhin" }]
+keywords = ["legal", "contracts", "bilingual", "translation", "linter", "legal-tech", "docx"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Legal Industry",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business",
+  "Topic :: Text Processing :: Linguistic",
+]
+dependencies = ["typer>=0.12", "rich>=13.0", "pyyaml>=6.0", "python-docx>=1.1"]
+
+[project.optional-dependencies]
+llm = ["litellm>=1.40"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/kirillsakhin/bilingual-lint"
+Issues = "https://github.com/kirillsakhin/bilingual-lint/issues"
+Changelog = "https://github.com/kirillsakhin/bilingual-lint/blob/main/CHANGELOG.md"
+
+[project.scripts]
+bilingual-lint = "bilingual_lint.cli:app"
+
+[tool.hatch.version]
+path = "src/bilingual_lint/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bilingual_lint"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# B008/UP045: typer's documented signature idiom (Option/Argument defaults, Optional[X])
+"src/bilingual_lint/cli.py" = ["B008", "UP045"]
