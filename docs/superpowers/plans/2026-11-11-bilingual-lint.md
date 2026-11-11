@@ -184,6 +184,8 @@ Copyright (c) 2026 Kirill Sakhin
 
 followed by the unmodified MIT permission and warranty paragraphs.
 
+Also create a one-line `README.md` now (`# bilingual-lint`). `pyproject.toml` names it as the readme, and the install in Step 7 fails without it. Task 16 replaces it with the real one.
+
 - [ ] **Step 6: Create the package and test packages**
 
 `src/bilingual_lint/__init__.py`:
@@ -5199,7 +5201,7 @@ One file in `src/bilingual_lint/rules/`, one entry in `ALL_RULES`, one entry in
 `RULE_DEFAULTS`, one row in the README table, and tests.
 ````
 
-- [ ] **Step 7: Create `README.md`**
+- [ ] **Step 7: Replace the stub `README.md`**
 
 ````markdown
 # bilingual-lint
