@@ -1,0 +1,269 @@
+{
+  "tool": "bilingual-lint",
+  "version": "0.1.0",
+  "source": {
+    "paths": [
+      "examples\\sample_en_ru.docx"
+    ],
+    "mode": "two-column",
+    "lang_a": "en",
+    "lang_b": "ru",
+    "pairs": 13,
+    "unpaired": 0
+  },
+  "summary": {
+    "total": 12,
+    "by_severity": {
+      "error": 8,
+      "warning": 3,
+      "info": 1
+    },
+    "by_rule": {
+      "BI003": 1,
+      "BI002": 1,
+      "BI005": 1,
+      "BI009": 1,
+      "BI010": 1,
+      "BI001": 1,
+      "BI004": 1,
+      "BI007": 2,
+      "BI006": 1,
+      "BI008": 1,
+      "BI011": 1
+    }
+  },
+  "rules": {
+    "ran": [
+      "BI000",
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI007",
+      "BI008",
+      "BI009",
+      "BI010",
+      "BI011"
+    ],
+    "disabled": [],
+    "skipped": []
+  },
+  "findings": [
+    {
+      "rule_id": "BI003",
+      "severity": "error",
+      "message": "dates differ — en only: 12 March 2025 · ru only: 21 марта 2025",
+      "pair_no": 2,
+      "confidence": 1.0,
+      "location_a": "table 1, row 2",
+      "location_b": "table 1, row 2",
+      "text_a": "Moscow, 12 March 2025",
+      "text_b": "г. Москва, 21 марта 2025 г.",
+      "context": {
+        "only_a": [
+          "12 March 2025"
+        ],
+        "only_b": [
+          "21 марта 2025"
+        ]
+      }
+    },
+    {
+      "rule_id": "BI002",
+      "severity": "error",
+      "message": "amounts differ — en only: 150,000 · ru only: 105 000",
+      "pair_no": 4,
+      "confidence": 1.0,
+      "location_a": "table 1, row 4",
+      "location_b": "table 1, row 4",
+      "text_a": "2.1. The price of the goods is USD 150,000 (one hundred and fifty thousand US dollars).",
+      "text_b": "2.1. Цена товара составляет 105 000 (сто пять тысяч) долларов США.",
+      "context": {
+        "only_a": [
+          "150,000"
+        ],
+        "only_b": [
+          "105 000"
+        ]
+      }
+    },
+    {
+      "rule_id": "BI005",
+      "severity": "error",
+      "message": "duration day type differs — business against calendar days (en: 10, ru: 10)",
+      "pair_no": 5,
+      "confidence": 1.0,
+      "location_a": "table 1, row 5",
+      "location_b": "table 1, row 5",
+      "text_a": "2.2. The Buyer shall pay for the goods within 10 (ten) business days.",
+      "text_b": "2.2. Покупатель обязан оплатить товар в течение 10 (десяти) дней.",
+      "context": {
+        "a": [
+          "day",
+          "business"
+        ],
+        "b": [
+          "day",
+          "calendar"
+        ]
+      }
+    },
+    {
+      "rule_id": "BI009",
+      "severity": "error",
+      "message": "identifiers differ — en only: DE89370400440532013000 · ru only: DE89370400440532013001",
+      "pair_no": 8,
+      "confidence": 1.0,
+      "location_a": "table 1, row 8",
+      "location_b": "table 1, row 8",
+      "text_a": "4.1. Bank details: IBAN DE89 3704 0044 0532 0130 00, e-mail: sales@alpha.example",
+      "text_b": "4.1. Банковские реквизиты: IBAN DE89 3704 0044 0532 0130 01, эл. почта: sales@alpha.example",
+      "context": {
+        "only_a": [
+          "DE89370400440532013000"
+        ],
+        "only_b": [
+          "DE89370400440532013001"
+        ]
+      }
+    },
+    {
+      "rule_id": "BI010",
+      "severity": "error",
+      "message": "the two sides disagree on which language prevails — en side: en · ru side: ru",
+      "pair_no": 9,
+      "confidence": 1.0,
+      "location_a": "table 1, row 9",
+      "location_b": "table 1, row 9",
+      "text_a": "5.1. In case of discrepancy between the English and Russian texts, the English text shall prevail.",
+      "text_b": "5.1. В случае расхождений между английским и русским текстами преимущество имеет текст на русском языке.",
+      "context": {
+        "a": "en",
+        "b": "ru"
+      }
+    },
+    {
+      "rule_id": "BI001",
+      "severity": "error",
+      "message": "numbers differ — ru only: 3",
+      "pair_no": 10,
+      "confidence": 1.0,
+      "location_a": "table 1, row 10",
+      "location_b": "table 1, row 10",
+      "text_a": "5.2. This Agreement is made in 2 (two) copies.",
+      "text_b": "5.2. Договор составлен в 3 (двух) экземплярах.",
+      "context": {
+        "only_a": [],
+        "only_b": [
+          "3"
+        ]
+      }
+    },
+    {
+      "rule_id": "BI004",
+      "severity": "error",
+      "message": "digits and words disagree on the ru side — 3 against \"двух\"",
+      "pair_no": 10,
+      "confidence": 1.0,
+      "location_a": "table 1, row 10",
+      "location_b": "table 1, row 10",
+      "text_a": "5.2. This Agreement is made in 2 (two) copies.",
+      "text_b": "5.2. Договор составлен в 3 (двух) экземплярах.",
+      "context": {
+        "lang": "ru",
+        "digits": "3",
+        "words": "двух"
+      }
+    },
+    {
+      "rule_id": "BI007",
+      "severity": "error",
+      "message": "empty on the ru side",
+      "pair_no": 12,
+      "confidence": 1.0,
+      "location_a": "table 1, row 12",
+      "location_b": "table 1, row 12",
+      "text_a": "7. Signatures of the parties",
+      "text_b": "",
+      "context": {
+        "missing": "ru"
+      }
+    },
+    {
+      "rule_id": "BI006",
+      "severity": "warning",
+      "message": "cross-references differ — en only: 2.2 · ru only: 2.1",
+      "pair_no": 6,
+      "confidence": 1.0,
+      "location_a": "table 1, row 6",
+      "location_b": "table 1, row 6",
+      "text_a": "3.1. The penalty is 0.1% of the price per day of delay, as provided in clause 2.2.",
+      "text_b": "3.1. Неустойка составляет 0,1% от цены за каждый день просрочки согласно п. 2.1.",
+      "context": {
+        "only_a": [
+          "2.2"
+        ],
+        "only_b": [
+          "2.1"
+        ]
+      }
+    },
+    {
+      "rule_id": "BI008",
+      "severity": "warning",
+      "message": "term \"Buyer\" is used, but \"Покупатель\" is not on the ru side",
+      "pair_no": 11,
+      "confidence": 1.0,
+      "location_a": "table 1, row 11",
+      "location_b": "table 1, row 11",
+      "text_a": "6.1. The Buyer shall inspect the goods on delivery.",
+      "text_b": "6.1. Заказчик обязан осмотреть товар при поставке.",
+      "context": {
+        "term_a": "Buyer",
+        "term_b": "Покупатель"
+      }
+    },
+    {
+      "rule_id": "BI007",
+      "severity": "warning",
+      "message": "text on the ru side does not look like ru — possibly left untranslated",
+      "pair_no": 13,
+      "confidence": 1.0,
+      "location_a": "table 1, row 13",
+      "location_b": "table 1, row 13",
+      "text_a": "This page is intentionally left blank for signatures.",
+      "text_b": "This page is intentionally left blank for signatures.",
+      "context": {
+        "lang": "ru"
+      }
+    },
+    {
+      "rule_id": "BI011",
+      "severity": "info",
+      "message": "negation on the en side only — check the meaning",
+      "pair_no": 7,
+      "confidence": 1.0,
+      "location_a": "table 1, row 7",
+      "location_b": "table 1, row 7",
+      "text_a": "3.2. The Seller may not assign its rights under this Agreement.",
+      "text_b": "3.2. Продавец вправе уступать свои права по Договору.",
+      "context": {
+        "a": {
+          "obligation": false,
+          "permission": true,
+          "negation": true
+        },
+        "b": {
+          "obligation": false,
+          "permission": true,
+          "negation": false
+        }
+      }
+    }
+  ],
+  "llm_pass": {
+    "requested": false
+  }
+}
