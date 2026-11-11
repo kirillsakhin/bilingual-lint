@@ -132,6 +132,7 @@ bilingual-lint check FILE [FILE]
   --rules BI001,BI010   run only these rules
   --llm MODEL           optional model pass (see below)
   --llm-gate            treat a model answer of "differs" as an error
+  --llm-scope SCOPE     flagged (default) or all
 bilingual-lint rules    list the rules
 bilingual-lint init     write a starter .bilingual-lint.yaml
 ```
@@ -142,6 +143,10 @@ bilingual-lint init     write a starter .bilingual-lint.yaml
 low-confidence pairs) to a model through [litellm](https://github.com/BerriAI/litellm)
 and asks one question: do these two texts say the same thing? Answers are marked
 as model suggestions and do not change the exit code unless you pass `--llm-gate`.
+
+`--llm-scope all` sends every pair instead, up to `llm.max_pairs`. That is the
+only way to catch wording dropped from one side when no number or defined term
+gives it away, and it means the whole document goes to the provider.
 
 **Without `--llm`, no text leaves your machine.** With it, the flagged pairs go to
 the provider of the model you chose. Decide whether that is acceptable for the

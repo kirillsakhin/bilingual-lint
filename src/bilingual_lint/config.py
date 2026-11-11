@@ -30,7 +30,8 @@ RULE_DEFAULTS: dict = {
     "BI011": {"enabled": True, "severity": "info"},
 }
 LLM_DEFAULTS = {"model": "anthropic/claude-sonnet-5", "max_pairs": 50,
-                "timeout_seconds": 60}
+                "timeout_seconds": 60, "scope": "flagged"}
+LLM_SCOPES = ("flagged", "all")
 TOP_KEYS = {"langs", "fail_on", "glossary", "low_confidence", "rules", "llm"}
 SEVERITY_VALUES = {s.value for s in Severity}
 LANG_RE = re.compile(r"[a-z]{2,3}\Z")

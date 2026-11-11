@@ -13,6 +13,8 @@ First version.
 - Language-neutral rules for any pair; word-based rules for English and Russian.
 - Console, JSON and Markdown reports; exit codes for use as a pipeline gate.
 - Optional model pass (`--llm`) for pairs the rules cannot settle. Off by default.
+  `--llm-scope all` sends every pair instead, to catch wording dropped from one
+  side when no number or term gives it away.
 - After a first run over real two-column documents: times of day are compared
   (`21:00` against `9 p.m.`); a currency named without an amount is compared;
   a clause reference worded differently on one side no longer reads as a

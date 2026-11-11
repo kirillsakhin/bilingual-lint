@@ -52,6 +52,14 @@ def test_only_unsettled_pairs_are_sent(monkeypatch):
     assert bi011.context["llm"] == {"label": "differs", "reason": "negation lost"}
 
 
+def test_scope_all_sends_every_complete_pair(monkeypatch):
+    doc, findings = prepared()
+    calls = fake_litellm(monkeypatch, ['{"label": "same", "reason": "ok"}'] * 2)
+    status = run_llm_pass(doc, findings, dict(LLM_DEFAULTS, scope="all"), "test/model")
+    assert len(calls) == 2 and "5 units" in calls[1]
+    assert status["completed"] == 2
+
+
 def test_gate_turns_differs_into_an_error(monkeypatch):
     doc, findings = prepared()
     fake_litellm(monkeypatch, ['{"label": "differs", "reason": "x"}'])

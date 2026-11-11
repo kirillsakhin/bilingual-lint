@@ -6,7 +6,7 @@ from typing import Optional
 import typer
 
 from . import __version__
-from .config import RULE_DEFAULTS, Config, ConfigError, load_glossary, parse_langs
+from .config import LLM_SCOPES, RULE_DEFAULTS, Config, ConfigError, load_glossary, parse_langs
 from .loaders import LoaderError, load
 from .models import Severity
 from .report.console import render_console
@@ -63,6 +63,10 @@ def check(
              "configured llm.model. Sends flagged text to that model's provider."),
     llm_gate: bool = typer.Option(
         False, "--llm-gate", help="Treat a model answer of 'differs' as an error"),
+    llm_scope: Optional[str] = typer.Option(
+        None, "--llm-scope",
+        help="flagged: only pairs the rules could not settle (default). "
+             "all: every pair, up to llm.max_pairs; sends the whole document."),
 ) -> None:
     """Lint a bilingual document and report findings."""
     if output_format not in ("console", "json", "md"):
@@ -99,6 +103,10 @@ def check(
         from .llm.reviewer import LlmUnavailable, run_llm_pass
 
         model = config.llm["model"] if llm in ("default", "") else llm
+        if llm_scope is not None:
+            config.llm["scope"] = llm_scope
+        if config.llm["scope"] not in LLM_SCOPES:
+            raise _fail(f"unknown llm scope {config.llm['scope']!r} (use flagged or all)")
         try:
             llm_status = run_llm_pass(doc, findings, config.llm, model, gate=llm_gate)
         except LlmUnavailable as exc:
@@ -152,6 +160,7 @@ llm:
   model: anthropic/claude-sonnet-5
   max_pairs: 50
   timeout_seconds: 60
+  scope: flagged   # or "all": every pair goes to the model, up to max_pairs
 """
 
 

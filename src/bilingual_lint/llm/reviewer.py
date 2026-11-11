@@ -1,5 +1,7 @@
-"""Optional model pass. It only sees pairs the rules could not settle, and its
-answers are marked as suggestions."""
+"""Optional model pass. By default it only sees pairs the rules could not
+settle; with scope "all" it reads every pair, which is the only way to catch
+wording dropped from one side when no number or term gives it away. Its answers
+are marked as suggestions."""
 from __future__ import annotations
 
 import json
@@ -46,15 +48,19 @@ def unsettled_pairs(findings: list) -> list:
 
 def run_llm_pass(doc: Document, findings: list, llm_cfg: dict, model: str,
                  gate: bool = False) -> dict:
-    """Review unsettled pairs. Appends 'LLM' findings in place and returns the
-    status dict for the report. With gate=True a 'differs' answer is an error."""
+    """Review unsettled pairs, or every pair when llm_cfg["scope"] is "all".
+    Appends 'LLM' findings in place and returns the status dict for the report.
+    With gate=True a 'differs' answer is an error."""
     try:
         import litellm
     except ImportError as exc:
         raise LlmUnavailable(
             'the model pass requires the extra: pip install "bilingual-lint[llm]"') from exc
 
-    pairs = unsettled_pairs(findings)
+    if llm_cfg.get("scope", "flagged") == "all":
+        pairs = doc.complete_pairs()
+    else:
+        pairs = unsettled_pairs(findings)
     capped = len(pairs) > llm_cfg["max_pairs"]
     pairs = pairs[: llm_cfg["max_pairs"]]
     completed = failed = 0
