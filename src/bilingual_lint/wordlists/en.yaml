@@ -1,0 +1,96 @@
+# English wordlists. List entries are regular-expression fragments,
+# matched case-insensitively. Keep longer alternatives before shorter ones.
+currencies:
+  USD: ['United\s+States\s+dollars?', 'U\.S\.\s?dollars?', 'US\s?dollars?', 'dollars?']
+  EUR: ['euros?']
+  GBP: ['pounds?\s+sterling', 'pounds?']
+  RUB: ['Russian\s+roubles?', 'Russian\s+rubles?', 'roubles?', 'rubles?']
+  CHF: ['Swiss\s+francs?']
+  CNY: ['renminbi', 'yuan']
+percent: ['per\s?cent', 'percent']
+duration_units:
+  day: ['days?']
+  week: ['weeks?']
+  month: ['months?']
+  year: ['years?']
+  hour: ['hours?']
+day_types:
+  business: ['business', 'working']
+  banking: ['banking', 'bank']
+  calendar: ['calendar']
+months:
+  january: 1
+  jan: 1
+  february: 2
+  feb: 2
+  march: 3
+  mar: 3
+  april: 4
+  apr: 4
+  may: 5
+  june: 6
+  jun: 6
+  july: 7
+  jul: 7
+  august: 8
+  aug: 8
+  september: 9
+  sept: 9
+  sep: 9
+  october: 10
+  oct: 10
+  november: 11
+  nov: 11
+  december: 12
+  dec: 12
+ref_keywords: ['sub-?clauses?', 'clauses?', 'sections?', 'articles?', 'paragraphs?', 'items?']
+number_words:
+  values:
+    zero: 0
+    one: 1
+    two: 2
+    three: 3
+    four: 4
+    five: 5
+    six: 6
+    seven: 7
+    eight: 8
+    nine: 9
+    ten: 10
+    eleven: 11
+    twelve: 12
+    thirteen: 13
+    fourteen: 14
+    fifteen: 15
+    sixteen: 16
+    seventeen: 17
+    eighteen: 18
+    nineteen: 19
+    twenty: 20
+    thirty: 30
+    forty: 40
+    fifty: 50
+    sixty: 60
+    seventy: 70
+    eighty: 80
+    ninety: 90
+  hundred: [hundred]
+  multipliers:
+    thousand: 1000
+    million: 1000000
+    billion: 1000000000
+  fillers: [and]
+modality:
+  obligation: ['shall', 'must', 'is\s+obliged\s+to', 'are\s+obliged\s+to', 'undertakes?', 'is\s+required\s+to']
+  permission: ['may', 'is\s+entitled\s+to', 'are\s+entitled\s+to', 'has\s+the\s+right', 'have\s+the\s+right']
+  # "No. 15" is a number sign, not a negation
+  negation: ['not', 'no(?!\.\s?\d)', 'never', 'neither', 'nor', 'cannot', 'without']
+prevailing:
+  cues: ['prevail\w*', 'take\s+precedence', 'takes\s+precedence', 'controlling', 'shall\s+govern', 'shall\s+control']
+  equal: ['equal\s+legal\s+force', 'equally\s+authentic', 'equal\s+force', 'equally\s+binding']
+  languages:
+    en: ['English']
+    ru: ['Russian']
+definitions:
+  inline: '\((?:[^()"“”]{0,60})["“]([^"“”]{2,60})["”]\)'
+  leading: '^\s*["“]([^"“”]{2,60})["”]\s+(?:means|shall\s+mean|has\s+the\s+meaning)'

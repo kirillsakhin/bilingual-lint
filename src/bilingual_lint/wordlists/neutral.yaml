@@ -1,0 +1,11 @@
+# Language-neutral data: used for every language pair.
+# All list entries are regular-expression fragments, matched case-insensitively.
+iso_codes: [USD, EUR, GBP, RUB, CHF, CNY, JPY, AED, KZT, AMD, BYN, UAH, TRY, INR, HKD, SGD, CAD, AUD]
+symbols:
+  "US$": USD
+  "$": USD
+  "€": EUR
+  "£": GBP
+  "₽": RUB
+  "¥": JPY
+percent: ["%"]
