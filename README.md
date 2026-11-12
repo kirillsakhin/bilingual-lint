@@ -19,7 +19,8 @@ clause and flag the same thing in another, and two runs disagree with each other
 
 So bilingual-lint does it the other way around. Rules check the facts: they catch
 the same defect every time, need no API key and send nothing anywhere. A model
-comes second, optionally, and only for the pairs the rules cannot settle.
+comes second, optionally, and by default only for the pairs the rules cannot
+settle.
 
 It does not judge translation style or quality. It checks what must be identical.
 
