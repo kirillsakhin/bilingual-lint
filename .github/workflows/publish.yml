@@ -1,0 +1,58 @@
+name: Publish
+
+# Uploads a release to PyPI through trusted publishing: PyPI trusts this
+# workflow in this repository, so no token is stored anywhere.
+# Runs when a version tag is pushed, or by hand for a tag that already exists.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to publish, for example v0.1.0"
+        required: true
+      upload:
+        description: "Upload to PyPI (untick to only build and check)"
+        type: boolean
+        default: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]" build twine
+      - run: ruff check .
+      - run: pytest -q
+      - run: python -m build
+      - run: twine check dist/*
+      - name: The package version must match the tag
+        env:
+          TAG: ${{ inputs.tag || github.ref_name }}
+        run: |
+          version=$(python -c "import bilingual_lint; print(bilingual_lint.__version__)")
+          test "v$version" = "$TAG" || { echo "package is $version, tag is $TAG"; exit 1; }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    if: github.event_name == 'push' || inputs.upload
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
