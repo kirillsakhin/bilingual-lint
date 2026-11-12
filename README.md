@@ -26,13 +26,12 @@ It does not judge translation style or quality. It checks what must be identical
 
 ## Install
 
-From a clone of this repository:
-
 ```
-pip install -e .
+pip install bilingual-lint
 ```
 
-Python 3.10 or newer. The optional model pass needs `pip install -e ".[llm]"`.
+Python 3.10 or newer. The optional model pass needs
+`pip install "bilingual-lint[llm]"`.
 
 ## Quickstart
 
