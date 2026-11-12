@@ -50,4 +50,6 @@ def render_console(doc: Document, findings: list, ran: list, disabled: list,
     console.print(f"[bold]{summary}[/bold]")
     if llm_status and llm_status.get("requested"):
         console.print(f"model pass: {escape(str(llm_status['model']))}, "
-                      f"{llm_status['completed']} reviewed, {llm_status['failed']} failed")
+                      f"{llm_status['completed']} reviewed, {llm_status['failed']} failed"
+                      + (f", {llm_status['skipped']} skipped (nothing to compare)"
+                         if llm_status.get("skipped") else ""))

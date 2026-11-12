@@ -31,7 +31,9 @@ def to_markdown(doc: Document, findings: list, ran: list, disabled: list,
     llm = report["llm_pass"]
     if llm.get("requested"):
         lines.append(f"- Model pass: {llm['model']}, {llm['completed']} pair(s) reviewed, "
-                     f"{llm['failed']} failed")
+                     f"{llm['failed']} failed"
+                     + (f", {llm['skipped']} skipped (nothing to compare)"
+                        if llm.get("skipped") else ""))
     lines.append("")
     if not report["findings"]:
         lines.append("No findings.")

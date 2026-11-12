@@ -146,7 +146,9 @@ as model suggestions and do not change the exit code unless you pass `--llm-gate
 
 `--llm-scope all` sends every pair instead, up to `llm.max_pairs`. That is the
 only way to catch wording dropped from one side when no number or defined term
-gives it away, and it means the whole document goes to the provider.
+gives it away, and it means the whole document goes to the provider. Pairs with
+nothing to compare (the same text on both sides, or no words at all) are not
+sent; the report counts them as skipped.
 
 **Without `--llm`, no text leaves your machine.** With it, the flagged pairs go to
 the provider of the model you chose. Decide whether that is acceptable for the

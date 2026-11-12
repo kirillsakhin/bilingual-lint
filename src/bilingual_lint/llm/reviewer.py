@@ -14,6 +14,9 @@ You compare two versions of the same contract clause written in two languages.
 Decide whether they say the same thing in legal effect: the same obligations,
 permissions, prohibitions, conditions, parties and scope. Ignore style and
 word order. Do not guess: if you cannot tell, say so.
+If the text is only a heading, a label or a name, with no sentence, compare
+what it names: "same" when both sides name the same thing, "differs" when they
+do not. Do not answer "unclear" only because the text is short.
 Respond with ONLY a JSON object:
 {"label": "same" | "differs" | "unclear", "reason": "<one sentence>"}"""
 LABELS = {"same", "differs", "unclear"}
@@ -46,10 +49,18 @@ def unsettled_pairs(findings: list) -> list:
     return [pairs[number] for number in sorted(pairs)]
 
 
+def nothing_to_compare(pair) -> bool:
+    """True when a model has no meaning to weigh: both sides carry the same
+    text (a name, a placeholder, a figure), or neither side has a word."""
+    a, b = " ".join(pair.a.text.split()), " ".join(pair.b.text.split())
+    return a == b or not any(ch.isalpha() for ch in a + b)
+
+
 def run_llm_pass(doc: Document, findings: list, llm_cfg: dict, model: str,
                  gate: bool = False) -> dict:
-    """Review unsettled pairs, or every pair when llm_cfg["scope"] is "all".
-    Appends 'LLM' findings in place and returns the status dict for the report.
+    """Review unsettled pairs, or every pair when llm_cfg["scope"] is "all"
+    (pairs with nothing to compare are counted as skipped, not sent). Appends
+    'LLM' findings in place and returns the status dict for the report.
     With gate=True a 'differs' answer is an error."""
     try:
         import litellm
@@ -57,8 +68,11 @@ def run_llm_pass(doc: Document, findings: list, llm_cfg: dict, model: str,
         raise LlmUnavailable(
             'the model pass requires the extra: pip install "bilingual-lint[llm]"') from exc
 
+    skipped = 0
     if llm_cfg.get("scope", "flagged") == "all":
-        pairs = doc.complete_pairs()
+        every = doc.complete_pairs()
+        pairs = [pair for pair in every if not nothing_to_compare(pair)]
+        skipped = len(every) - len(pairs)
     else:
         pairs = unsettled_pairs(findings)
     capped = len(pairs) > llm_cfg["max_pairs"]
@@ -93,4 +107,4 @@ def run_llm_pass(doc: Document, findings: list, llm_cfg: dict, model: str,
                 f"model suggestion: meaning {label} — {reason}", pair,
                 {"model": model, "label": label}))
     return {"requested": True, "model": model, "completed": completed,
-            "failed": failed, "capped": capped}
+            "failed": failed, "capped": capped, "skipped": skipped}
