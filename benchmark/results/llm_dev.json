@@ -1,0 +1,1909 @@
+{
+ "part": "dev",
+ "scored_on": "2026-11-13",
+ "model": "anthropic/claude-sonnet-5",
+ "seed": 20261113,
+ "documents": 25,
+ "data_sha256": "492c6a3c1af551d38866fc89f0fad82be817d747dbf15fd324897175778ee96b",
+ "model_summary": {
+  "documents": 25,
+  "clean_documents_failed": 0,
+  "operators": {
+   "digit": {
+    "caught": 22,
+    "missed": 0,
+    "excluded": 3,
+    "failed": 0,
+    "recall": 1.0
+   },
+   "date": {
+    "caught": 23,
+    "missed": 0,
+    "excluded": 1,
+    "failed": 0,
+    "recall": 1.0
+   },
+   "reference": {
+    "caught": 25,
+    "missed": 0,
+    "excluded": 0,
+    "failed": 0,
+    "recall": 1.0
+   },
+   "currency": {
+    "caught": 5,
+    "missed": 0,
+    "excluded": 0,
+    "failed": 0,
+    "recall": 1.0
+   },
+   "negation": {
+    "caught": 6,
+    "missed": 3,
+    "excluded": 1,
+    "failed": 0,
+    "recall": 0.6667
+   },
+   "drop": {
+    "caught": 23,
+    "missed": 0,
+    "excluded": 2,
+    "failed": 0,
+    "recall": 1.0
+   }
+  },
+  "clean_rows_named_per_100_pairs": 4.5,
+  "extra_rows_named_per_mutated_copy": 0.3
+ },
+ "linter_summary": {
+  "documents": 25,
+  "pairs": 1000,
+  "operators": {
+   "digit": {
+    "planted": 25,
+    "expected": 25,
+    "any": 25,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "date": {
+    "planted": 24,
+    "expected": 24,
+    "any": 24,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "reference": {
+    "planted": 25,
+    "expected": 25,
+    "any": 25,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "currency": {
+    "planted": 5,
+    "expected": 5,
+    "any": 5,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "negation": {
+    "planted": 10,
+    "expected": 7,
+    "any": 7,
+    "recall_expected": 0.7,
+    "recall_any": 0.7
+   },
+   "drop": {
+    "planted": 25,
+    "expected": 25,
+    "any": 25,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   }
+  },
+  "figures": {
+   "planted": 54,
+   "caught": 54,
+   "recall": 1.0
+  },
+  "paragraphs": {
+   "planted": 25,
+   "caught": 25,
+   "recall": 1.0
+  },
+  "clean_flags_per_100_pairs": {
+   "error": 2.3,
+   "warning": 3.1,
+   "info": 6.1
+  },
+  "pairing_accuracy": 0.997,
+  "pairing_accuracy_one_missing": 0.9867
+ },
+ "model_results": [
+  {
+   "pairs": 40,
+   "clean_rows": [
+    5
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 5,
+     "side": "a",
+     "before": "70",
+     "after": "10",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "excluded",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 29,
+     "side": "a",
+     "before": "3",
+     "after": "21",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 14,
+     "side": "a",
+     "before": "paragraph 6",
+     "after": "paragraph 7",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "negation",
+     "row": 2,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 36,
+     "side": "b",
+     "before": "6. Каким образом сокращения ГФУ связаны с существующим графиком вывода из обращения ГХФУ? и",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    14
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 18,
+     "side": "b",
+     "before": "17",
+     "after": "77",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 33,
+     "side": "a",
+     "before": "25",
+     "after": "13",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 3,
+     "side": "a",
+     "before": "Article 60",
+     "after": "Article 6",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "negation",
+     "row": 4,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "a",
+     "before": "Doing this will help overcome the challenges of implementing the Beijing Platform for Action Priority themes.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    1,
+    10,
+    16,
+    37
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 18,
+     "side": "a",
+     "before": "2015",
+     "after": "2515",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "date",
+     "row": 4,
+     "side": "b",
+     "before": "14",
+     "after": "9",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "reference",
+     "row": 0,
+     "side": "a",
+     "before": "paragraph 3",
+     "after": "paragraph 8",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "negation",
+     "row": 16,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "excluded",
+     "extra_rows": 1
+    },
+    {
+     "operator": "drop",
+     "row": 21,
+     "side": "a",
+     "before": "This year marks the seventieth anniversary of the founding of the United Nations and the victory won in the world war against fascism.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 32,
+     "side": "b",
+     "before": "190",
+     "after": "120",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 3,
+     "side": "b",
+     "before": "17",
+     "after": "13",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 25,
+     "side": "b",
+     "before": "Пункт 2",
+     "after": "Пункт 5",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 12,
+     "side": "b",
+     "before": "По данным управляющей державы территория продолжает поддерживать двусторонний диалог с Международным валютным фондом, в котором участвует государственный, банковский и частный секторы и представители профсоюзов территории.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    21
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 6,
+     "side": "a",
+     "before": "31",
+     "after": "21",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 34,
+     "side": "a",
+     "before": "18",
+     "after": "12",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 27,
+     "side": "a",
+     "before": "paragraph 5",
+     "after": "paragraph 4",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "negation",
+     "row": 18,
+     "side": "a",
+     "before": " not",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "missed",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "b",
+     "before": "Я с удовлетворением отмечаю, что процесс уничтожения 12 объектов по производству химического оружия, оставшихся в Сирийской Арабской Республике, уже идет и начался с первого и второго туннелей.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    13
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 4,
+     "side": "b",
+     "before": "2048",
+     "after": "2018",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 22,
+     "side": "a",
+     "before": "articles 66",
+     "after": "articles 1",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "b",
+     "before": "Комитет Совета Безопасности, учрежденный резолюцией 2048 (2012) по Гвинее-Бисау",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    0,
+    5,
+    10,
+    24,
+    39
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "a",
+     "before": "48",
+     "after": "49",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "date",
+     "row": 20,
+     "side": "a",
+     "before": "18",
+     "after": "4",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 2
+    },
+    {
+     "operator": "reference",
+     "row": 11,
+     "side": "b",
+     "before": "пункта 11",
+     "after": "пункта 6",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 36,
+     "side": "b",
+     "before": "1. Полное выполнение всех положений Договора о нераспространении ядерного оружия, включая соответствующие соглашения о гарантиях, по-прежнему остается принципиально важным требованием для обеспечения его целостности.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    21,
+    28,
+    31
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 23,
+     "side": "a",
+     "before": "10",
+     "after": "14",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "date",
+     "row": 18,
+     "side": "b",
+     "before": "31",
+     "after": "28",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 2
+    },
+    {
+     "operator": "reference",
+     "row": 33,
+     "side": "b",
+     "before": "Пункт 4",
+     "after": "Пункт 9",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 2
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "b",
+     "before": "Настоящее письмо дополняет наши предыдущие 535 писем, касающихся кризиса, по-прежнему наблюдающегося на оккупированной палестинской территории, включая Восточный Иерусалим, относящийся к территории Государства Палестина.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    20,
+    21,
+    32
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 24,
+     "side": "b",
+     "before": "24",
+     "after": "64",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 24,
+     "side": "b",
+     "before": "26",
+     "after": "1",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 3,
+     "side": "b",
+     "before": "Пункт 6",
+     "after": "Пункт 8",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "b",
+     "before": "25. просит Генерального секретаря принять необходимые меры для обеспечения неукоснительного соблюдения ЮНИСФА проводимой Организацией Объединенных Наций политики абсолютной нетерпимости к сексуальной эксплуатации и сексуальным надругательствам и сообщать Совету о случаях такого поведения, если они будут иметь место;",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    19,
+    20
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 29,
+     "side": "b",
+     "before": "17",
+     "after": "19",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 25,
+     "side": "b",
+     "before": "20",
+     "after": "14",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 17,
+     "side": "a",
+     "before": "paragraph 3",
+     "after": "paragraph 7",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "negation",
+     "row": 5,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "missed",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 20,
+     "side": "a",
+     "before": "This decision, taken on a non-inclusive basis, was seen as unfavourable to the ongoing peace and reconciliation process.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "excluded",
+     "extra_rows": 1
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    0
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 26,
+     "side": "b",
+     "before": "25",
+     "after": "65",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 2,
+     "side": "b",
+     "before": "24",
+     "after": "15",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 4,
+     "side": "b",
+     "before": "Пункт 44",
+     "after": "Пункт 2",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "currency",
+     "row": 7,
+     "side": "a",
+     "before": "$",
+     "after": "€",
+     "expected": [
+      "BI002"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "b",
+     "before": "Беларусь* (2016 год), Польша (2017 год), Российская Федерация* (2016 год), Румыния (2017 год)",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    8,
+    31,
+    35
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 17,
+     "side": "b",
+     "before": "131",
+     "after": "136",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "date",
+     "row": 7,
+     "side": "b",
+     "before": "13",
+     "after": "4",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "reference",
+     "row": 2,
+     "side": "a",
+     "before": "paragraphs 9",
+     "after": "paragraphs 4",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "negation",
+     "row": 6,
+     "side": "a",
+     "before": " not",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "b",
+     "before": "Применение газообразного хлора силами сирийского режима является нарушением международного гуманитарного права и международных норм в области прав человека, в том числе резолюции 2118 (2013) Совета Безопасности, в которой члены Совета Безопасности единогласно определили, что применение химического оружия представляет собой угрозу для международного мира и безопасности, и постановили, что <<Сирийская Арабская Республика не должна применять, разрабатывать, производить, иным образом приобретать, накапливать или хранить химическое оружие>>.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    26,
+    35
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 15,
+     "side": "b",
+     "before": "2015",
+     "after": "2035",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 14,
+     "side": "b",
+     "before": "20",
+     "after": "22",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 30,
+     "side": "b",
+     "before": "Пункты 13",
+     "after": "Пункты 9",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "negation",
+     "row": 27,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "b",
+     "before": "В 1994 году Харита Каур Деол стала первой женщиной-пилотом индийских ВВС на самостоятельных вылетах.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    28,
+    36
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 9,
+     "side": "a",
+     "before": "2030",
+     "after": "2430",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 16,
+     "side": "a",
+     "before": "17",
+     "after": "11",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 19,
+     "side": "b",
+     "before": "пункту 44",
+     "after": "пункту 6",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "currency",
+     "row": 2,
+     "side": "a",
+     "before": "$",
+     "after": "€",
+     "expected": [
+      "BI002"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 31,
+     "side": "b",
+     "before": "23. За период с 2010 года Финляндия внесла свыше 1,5 млн. евро в фонд программы <<Вторая линия обороны>> в рамках Инициативы по предотвращению ядерной контрабанды.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    8
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 22,
+     "side": "a",
+     "before": "2015",
+     "after": "3015",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 29,
+     "side": "a",
+     "before": "6",
+     "after": "21",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "reference",
+     "row": 10,
+     "side": "b",
+     "before": "пункту 19",
+     "after": "пункту 3",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "negation",
+     "row": 39,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "b",
+     "before": "3. Поскольку срок полномочий гжи Динич, гна Ханта, гна Омрана альМусави, гна Сене и гна Сейюма истекает 31 декабря 2015 года, Генеральной Ассамблее на ее семидесятой сессии необходимо будет назначить пять человек для заполнения открывающихся вакансий.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    26
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 26,
+     "side": "b",
+     "before": "18",
+     "after": "68",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "excluded",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 15,
+     "side": "b",
+     "before": "29",
+     "after": "10",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 5,
+     "side": "a",
+     "before": "paragraphs 9",
+     "after": "paragraphs 2",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "negation",
+     "row": 4,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "drop",
+     "row": 35,
+     "side": "b",
+     "before": "Правительство Израиля возлагает ответственность на правительство Сирии за это и все другие нападения, совершаемые с ее территории, и за все нарушения Соглашения о разъединении сил 1974 года.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    35
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 21,
+     "side": "a",
+     "before": "689",
+     "after": "989",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "date",
+     "row": 35,
+     "side": "b",
+     "before": "2",
+     "after": "20",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "excluded",
+     "extra_rows": 1
+    },
+    {
+     "operator": "reference",
+     "row": 18,
+     "side": "a",
+     "before": "paragraph 86",
+     "after": "paragraph 5",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 25,
+     "side": "b",
+     "before": "Во многих странах женщины затрачивают несоразмерное количество времени на уход за детьми и выполнение работ по дому.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    26
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 7,
+     "side": "b",
+     "before": "20",
+     "after": "10",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "date",
+     "row": 19,
+     "side": "b",
+     "before": "1",
+     "after": "3",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 10,
+     "side": "b",
+     "before": "раздел 10.103",
+     "after": "раздел 10.3",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "negation",
+     "row": 10,
+     "side": "a",
+     "before": " not",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "outcome": "missed",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 31,
+     "side": "b",
+     "before": "Так, усовершенствована деятельность Министерства юстиции Республики Узбекистан, при котором в 2012 году учрежден Межведомственный совет по координации работы государственных органов по правовой пропаганде и просвещению.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    18,
+    23
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "a",
+     "before": "14",
+     "after": "19",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 3,
+     "side": "b",
+     "before": "16",
+     "after": "13",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "reference",
+     "row": 9,
+     "side": "b",
+     "before": "пункт 154",
+     "after": "пункт 4",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 7,
+     "side": "b",
+     "before": "Совещание будет публичным и открытым для всех государств-членов.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    22,
+    38
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 27,
+     "side": "b",
+     "before": "107",
+     "after": "307",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "date",
+     "row": 37,
+     "side": "a",
+     "before": "12",
+     "after": "19",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 7,
+     "side": "b",
+     "before": "Пункт 4",
+     "after": "Пункт 2",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 12,
+     "side": "b",
+     "before": "Положение в Ливии (22 февраля 2011 года; 5 марта 2015 года)",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 20,
+     "side": "a",
+     "before": "10",
+     "after": "90",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 2
+    },
+    {
+     "operator": "date",
+     "row": 27,
+     "side": "a",
+     "before": "18",
+     "after": "10",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 6,
+     "side": "b",
+     "before": "Пункт 51",
+     "after": "Пункт 1",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "drop",
+     "row": 24,
+     "side": "b",
+     "before": "Бюро было согласовано, что при проверке полученных документов о полномочиях ими будут приниматься оригиналы документов о полномочиях в надлежащем виде, а также копии документов о полномочиях в надлежащем виде, при том понимании, что оригиналы документов о полномочиях будут представлены в кратчайшие возможные сроки.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    17,
+    26
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 26,
+     "side": "a",
+     "before": "14",
+     "after": "18",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "excluded",
+     "extra_rows": 1
+    },
+    {
+     "operator": "date",
+     "row": 7,
+     "side": "b",
+     "before": "30",
+     "after": "4",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 15,
+     "side": "b",
+     "before": "пункт 66",
+     "after": "пункт 9",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "currency",
+     "row": 16,
+     "side": "a",
+     "before": "$",
+     "after": "€",
+     "expected": [
+      "BI002"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 36,
+     "side": "b",
+     "before": "особо отмечая тот факт, что здоровье населения мира является долгосрочной задачей развития, которая требует более тесного международного сотрудничества на основе обмена передовым опытом с целью улучшения образа жизни людей, свободного от излишеств любого рода,",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    9
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "a",
+     "before": "2015",
+     "after": "2095",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 26,
+     "side": "b",
+     "before": "29",
+     "after": "7",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 18,
+     "side": "a",
+     "before": "paragraph 237",
+     "after": "paragraph 5",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 1
+    },
+    {
+     "operator": "currency",
+     "row": 23,
+     "side": "a",
+     "before": "$",
+     "after": "€",
+     "expected": [
+      "BI002"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 27,
+     "side": "b",
+     "before": "Предварительная повестка дня 7370-го заседания Совета Безопасности,",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "b",
+     "before": "2015",
+     "after": "2019",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 37,
+     "side": "a",
+     "before": "24",
+     "after": "18",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 7,
+     "side": "b",
+     "before": "Пункт 42",
+     "after": "Пункт 2",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 2
+    },
+    {
+     "operator": "currency",
+     "row": 5,
+     "side": "a",
+     "before": "$",
+     "after": "€",
+     "expected": [
+      "BI002"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 8,
+     "side": "a",
+     "before": "9. Encourages Member States to ensure a coherent and mutually reinforcing approach while implementing all relevant agreed frameworks, including the World Programme of Action for Youth and the post-2015 development agenda;",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    }
+   ]
+  },
+  {
+   "pairs": 40,
+   "clean_rows": [
+    4,
+    12,
+    21,
+    31,
+    32
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 33,
+     "side": "a",
+     "before": "20",
+     "after": "23",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "date",
+     "row": 17,
+     "side": "b",
+     "before": "3",
+     "after": "8",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "reference",
+     "row": 33,
+     "side": "a",
+     "before": "Article 20",
+     "after": "Article 8",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "outcome": "caught",
+     "extra_rows": 0
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "b",
+     "before": "Кроме того, Группа призывает все государства избегать любого ненужного нажима или вмешательства в деятельность Агентства, особенно в рамках осуществляемого им процесса проверок, поскольку это могло бы поставить под угрозу эффективность его деятельности и авторитет.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "outcome": "excluded",
+     "extra_rows": 0
+    }
+   ]
+  }
+ ]
+}
