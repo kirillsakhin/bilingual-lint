@@ -19,9 +19,9 @@ LONG_DIGITS_RE = re.compile(r"(?<![\d.,])\d{9,}(?![\d.,]\d)")
 LEADING_RE = re.compile(r"^\s*((?:\d{1,3}\.)+\d{0,3}|\d{1,3}[.)])(?=\s)")
 REF_NUMBER_RE = re.compile(r"\d+(?:\.\d+)*")
 PREFIX_RE = re.compile(r"(US\$|\$|€|£|₽|¥|(?<![A-Za-z])[A-Z]{3})[\s ]?\Z")
-# "9 p.m.", "9:30 pm" or "21:00"
+# "9 p.m.", "9:30 pm", "9.30 p.m." or "21:00"
 TIME_RE = re.compile(
-    r"(?<![\w:.,])(?:(\d{1,2})(?::(\d{2}))?\s?([ap])\.?m\b\.?"
+    r"(?<![\w:.,])(?:(\d{1,2})(?:[:.](\d{2}))?\s?([ap])\.?m\b\.?"
     r"|(\d{1,2}):(\d{2})(?![\d:]))", re.IGNORECASE)
 
 
@@ -128,6 +128,14 @@ def extract_facts(text: str, lang: str, strict: bool = False) -> Facts:
         if fact:
             facts.times.append(fact)
             work = _blank(work, m.start(), m.end())
+
+    if wl.clock_time is not None:
+        for m in list(wl.clock_time.finditer(work)):
+            hour, minute = int(m["hour"]), int(m["minute"])
+            if hour <= 23 and minute <= 59:
+                facts.times.append(TimeFact(
+                    text[m.start("hour"):m.end()], f"{hour:02d}:{minute:02d}"))
+                work = _blank(work, m.start("hour"), m.end())
 
     facts.currencies = _currencies(text, wl)
     for m in NUM_RE.finditer(work):

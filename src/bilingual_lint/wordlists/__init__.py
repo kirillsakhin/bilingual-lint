@@ -44,6 +44,7 @@ class Wordlists:
     months: dict
     ref_keywords: re.Pattern | None
     number_words: NumberWords | None
+    clock_time: re.Pattern | None = None
     raw: dict = field(default_factory=dict)
 
 
@@ -110,6 +111,9 @@ def load_wordlists(lang: str) -> Wordlists:
             fillers=frozenset(nw.get("fillers") or []),
         )
 
+    clock = data.get("clock_time")
+    clock_time = re.compile(r"(?<!\w)" + clock + r"(?!\w)", FLAGS) if clock else None
+
     return Wordlists(
         lang=lang,
         has_language_rules=own is not None,
@@ -123,6 +127,7 @@ def load_wordlists(lang: str) -> Wordlists:
         months={str(k).lower(): int(v) for k, v in (data.get("months") or {}).items()},
         ref_keywords=ref_keywords,
         number_words=number_words,
+        clock_time=clock_time,
         raw=data,
     )
 

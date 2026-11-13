@@ -193,3 +193,51 @@ def test_plain_shall_against_a_permission_is_still_reported():
              "Управляющий вправе заменить консультанта.")]
     (finding,) = check(ModalityDiffers, rows)
     assert "obligation on the en side" in finding.message
+
+
+# --- clock times in hour-and-minute notation ---------------------------------
+
+def test_am_time_against_russian_hours_and_minutes():
+    rows = [("The hearing opens on Monday at 11 a.m.",
+             "Слушание начнется в понедельник в 11 ч. 00 м.")]
+    assert check(NumbersDiffer, rows) == []
+    assert check(DatesDiffer, rows) == []
+
+
+def test_pm_time_against_russian_hours_and_minutes():
+    rows = [("The hearing opens at 3 p.m. and closes at 6:15 p.m.",
+             "Слушание начнется в 15 ч. 00 м. и закончится в 18 ч. 15 м.")]
+    assert check(NumbersDiffer, rows) == []
+    assert check(DatesDiffer, rows) == []
+
+
+def test_time_written_with_a_dot_before_pm():
+    rows = [("The hearing opens at 12.40 p.m.", "Слушание начнется в 12 ч. 40 м.")]
+    assert check(NumbersDiffer, rows) == []
+    assert check(DatesDiffer, rows) == []
+
+
+def test_a_range_of_russian_clock_times():
+    rows = [("The office is open from 10 a.m. to 1 p.m.",
+             "Офис открыт с 10 ч. 00 м. до 13 ч. 00 м.")]
+    assert check(NumbersDiffer, rows) == []
+    assert check(DatesDiffer, rows) == []
+
+
+def test_russian_hours_and_minutes_that_differ_are_reported():
+    rows = [("The hearing opens on Monday at 11 a.m.",
+             "Слушание начнется в понедельник в 12 ч. 00 м.")]
+    (finding,) = check(DatesDiffer, rows)
+    assert finding.severity is Severity.ERROR
+    assert finding.message == "times differ — en only: 11 a.m. · ru only: 12 ч. 00 м."
+
+
+def test_dotted_time_that_differs_is_reported():
+    rows = [("The hearing opens at 10.10 a.m.", "Слушание начнется в 10 ч. 00 м.")]
+    (finding,) = check(DatesDiffer, rows)
+    assert finding.message == "times differ — en only: 10.10 a.m. · ru only: 10 ч. 00 м."
+
+
+def test_a_russian_length_of_time_is_not_a_clock_time():
+    rows = [("The test lasts 3 hours 15 minutes.", "Испытание длится 3 ч. 15 м.")]
+    assert check(DatesDiffer, rows) == []

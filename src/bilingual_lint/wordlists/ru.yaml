@@ -19,6 +19,9 @@ day_types:
   business: ['рабоч\w+']
   banking: ['банковск\w+']
   calendar: ['календарн\w+']
+# A clock time in hours and minutes after a preposition or a dash; the
+# preposition keeps a length of time ("длится 3 ч. 15 м.") out.
+clock_time: '(?:в|с|до|к|по|от|после|около|[-–—])\s+(?P<hour>\d{1,2})\s?(?:час|ч)\.?\s?(?P<minute>\d{2})\s?(?:мин|м)\.?'
 months:
   января: 1
   январь: 1
