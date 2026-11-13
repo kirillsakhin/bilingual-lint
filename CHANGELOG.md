@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+- Benchmark published: planted-defect recall, false flags on clean text and
+  two-file pairing, measured on the United Nations Parallel Corpus v1.0 and on
+  invented contracts, with a whole-document model review for comparison. See
+  `benchmark/README.md`.
+- Clock times: Russian hour-and-minute notation ("11 ч. 00 м.") and English
+  times written with a dot ("12.40 p.m.") are now read as times and compared
+  with the other side, instead of being reported as differing numbers.
+
 ## 0.1.1 — 2026-11-12
 
 - Published on PyPI: `pip install bilingual-lint`. No change in behaviour.

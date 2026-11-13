@@ -163,9 +163,82 @@ document in front of you.
 - BI011 is a wordlist heuristic and will produce false flags; it is `info` for that reason.
 - In two-file mode a short missing paragraph next to a long one can be absorbed
   into its neighbour instead of being reported as missing.
-- No accuracy figures are published yet. A benchmark on public bilingual texts
-  with planted defects is the next milestone; until then, treat the tool as a
-  second pair of eyes, not as proof that a document is clean.
+- The [benchmark](#benchmark) plants one defect at a time in UN prose and in
+  three invented contracts. It does not show that a document with no findings
+  is clean: treat the tool as a second pair of eyes.
+
+## Benchmark
+
+Measured on the test set of the United Nations Parallel Corpus v1.0:
+4,000 English and Russian sentence pairs cut into 100 documents.
+One defect at a time was planted by a tool that was frozen before any rule was
+tuned and shares no code with the linter. The test set was held out, pinned by
+hash and scored once, at commit `1ad1e09` (released as 0.1.2). Method, limits
+and how to run it again: [benchmark/README.md](benchmark/README.md).
+
+| Measure | Target | Result | Met |
+|---|---|---|---|
+| Planted number, amount, date and identifier defects caught | at least 0.98 | 0.9989 | yes |
+| Dropped paragraphs caught | at least 0.95 | 1.0 | yes |
+| False flags on clean pairs, error severity, per 100 pairs | at most 3.0 | 1.9 | yes |
+| Correct pairing in two-file mode | at least 0.95 | 0.9885 | yes |
+
+All four targets were met on the hold-out.
+
+The linter raised 96 error-level findings on the unmodified text. Read by
+hand, 20 are real differences between the two published versions (a line
+cut short, a figure present on one side only) and 76 are false flags. With
+every finding counted as a false flag the rate is 2.4 per 100 pairs. In
+two-file mode the pairing figure above is with one paragraph missing from one
+side; with nothing missing, pairing was correct
+for 0.9985 of the rows.
+
+| Planted defect | Planted | Caught | Recall |
+|---|---|---|---|
+| a digit changed | 2736 | 2736 | 1.0 |
+| the day of a date changed | 711 | 711 | 1.0 |
+| a clause or paragraph reference changed | 283 | 283 | 1.0 |
+| a currency changed | 69 | 65 | 0.942 |
+| a negation dropped (BI011, an `info` hint) | 32 | 21 | 0.6562 |
+| a paragraph dropped | 7153 | 7153 | 1.0 |
+
+### Invented contracts (45 rows, weaker evidence)
+
+UN documents have almost no prices, bank details, party names or
+prevailing-language clauses, so those defects were planted in three invented
+contracts. The contracts were written by the author of the rules.
+
+| Planted defect | Planted | Caught | Recall |
+|---|---|---|---|
+| a digit changed | 38 | 38 | 1.0 |
+| the day of a date changed | 14 | 14 | 1.0 |
+| a clause or paragraph reference changed | 8 | 8 | 1.0 |
+| a currency changed | 14 | 13 | 0.9286 |
+| "business days" changed to "days" | 13 | 12 | 0.9231 |
+| a negation dropped (BI011, an `info` hint) | 10 | 4 | 0.4 |
+| the prevailing language flipped | 6 | 6 | 1.0 |
+| an identifier changed | 6 | 6 | 1.0 |
+| a party name swapped | 25 | 25 | 1.0 |
+| a paragraph dropped | 78 | 78 | 1.0 |
+
+### Against a model reading the whole document
+
+`anthropic/claude-sonnet-5` was given the same mutated copies of the first 25
+hold-out documents, one planted defect of each kind per document, and asked to
+name the rows that differ. A defect on a row the model had already named in
+the clean copy is left out of its count.
+
+| Planted defect | Model | Linter |
+|---|---|---|
+| a digit changed | 25 of 25 | 25 of 25 |
+| the day of a date changed | 23 of 23 | 24 of 24 |
+| a clause or paragraph reference changed | 22 of 22 | 22 of 22 |
+| a currency changed | 10 of 11 | 10 of 11 |
+| a negation dropped (BI011, an `info` hint) | 4 of 4 | 4 of 4 |
+| a paragraph dropped | 25 of 25 | 25 of 25 |
+
+On clean text the model named 4.4 rows per 100 pairs, and on a mutated copy
+it named 0.17 rows besides the planted one. One model, one run, one prompt.
 
 ## Development
 
