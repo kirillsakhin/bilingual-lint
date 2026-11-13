@@ -1,0 +1,722 @@
+{
+  "0|5|BI001|numbers differ — en only: 100,000 · ru only: 10 000": {
+    "verdict": "real",
+    "note": "English says per 100,000 live births, Russian says per 10 000"
+  },
+  "0|19|BI001|numbers differ — ru only: 11, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 11 a.m. / 11 ч. 00 м."
+  },
+  "0|19|BI003|times differ — en only: 11 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 11 a.m. / 11 ч. 00 м."
+  },
+  "1|0|BI001|numbers differ — en only: 12.40 · ru only: 12, 40": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 12.40 p.m. / 12 ч. 40 м."
+  },
+  "1|16|BI001|numbers differ — en only: 2020": {
+    "verdict": "false",
+    "note": "same year; Russian glues it to the preceding word"
+  },
+  "1|17|BI001|numbers differ — en only: 10.23 · ru only: 10, 23": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10.23 a.m. / 10 ч. 23 м."
+  },
+  "2|21|BI001|numbers differ — ru only: 70": {
+    "verdict": "false",
+    "note": "seventieth in words against 70 in digits"
+  },
+  "2|34|BI001|numbers differ — en only: 10.47 · ru only: 10, 47": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10.47 a.m. / 10 ч. 47 м."
+  },
+  "3|3|BI001|numbers differ — ru only: 15, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "3|3|BI003|times differ — en only: 3 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "4|17|BI001|numbers differ — en only: 5": {
+    "verdict": "false",
+    "note": "date range; Russian repeats the year and month"
+  },
+  "4|17|BI003|dates differ — ru only: 5 февраля 2015": {
+    "verdict": "false",
+    "note": "date range; Russian repeats the year and month"
+  },
+  "4|34|BI001|numbers differ — en only: 10.15 · ru only: 10, 15": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10.15 a.m. / 10 ч. 15 м."
+  },
+  "5|1|BI001|numbers differ — ru only: 2": {
+    "verdict": "false",
+    "note": "name of a spacecraft written with and without a hyphen"
+  },
+  "6|5|BI001|numbers differ — en only: 10.10 · ru only: 10, 00": {
+    "verdict": "real",
+    "note": "the two versions give different times: 10.10 a.m. / 10 ч. 00 м."
+  },
+  "6|10|BI001|numbers differ — en only: 2014, 2015": {
+    "verdict": "real",
+    "note": "the Russian line stops before the years 2014-2015"
+  },
+  "6|20|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "6|20|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "7|0|BI001|numbers differ — en only: 1960": {
+    "verdict": "false",
+    "note": "1960s in digits against words"
+  },
+  "7|29|BI001|numbers differ — en only: 10.18 · ru only: 10, 18": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10.18 a.m. / 10 ч. 18 м."
+  },
+  "7|32|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "7|32|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "10|20|BI001|numbers differ — ru only: 256": {
+    "verdict": "false",
+    "note": "same recommendation number, repeated in Russian"
+  },
+  "10|23|BI005|durations differ — en only: 2.5": {
+    "verdict": "false",
+    "note": "2.5 years against the same period in words"
+  },
+  "11|7|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "11|7|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "11|13|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "11|13|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "12|33|BI001|numbers differ — ru only: 18, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 6 p.m. / 18 ч. 00 м."
+  },
+  "12|33|BI003|times differ — en only: 6 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 6 p.m. / 18 ч. 00 м."
+  },
+  "13|0|BI001|numbers differ — ru only: 15, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "13|0|BI003|times differ — en only: 3 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "13|5|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "13|5|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "13|15|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "13|15|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "13|31|BI001|numbers differ — ru only: 1,5": {
+    "verdict": "false",
+    "note": "same amount; English glues the currency word to the number"
+  },
+  "13|36|BI001|numbers differ — en only: 31 · ru only: 34": {
+    "verdict": "real",
+    "note": "page reference differs: p. 31 against p. 34 (each edition's own pagination)"
+  },
+  "13|37|BI005|durations differ — ru only: 15": {
+    "verdict": "false",
+    "note": "same age, repeated in Russian"
+  },
+  "14|14|BI001|numbers differ — en only: 3.35 · ru only: 15, 35": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3.35 p.m. / 15 ч. 35 м."
+  },
+  "15|23|BI001|numbers differ — ru only: 15, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "15|23|BI003|times differ — en only: 3 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "15|32|BI001|numbers differ — ru only: 17, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 5 p.m. / 17 ч. 00 м."
+  },
+  "15|32|BI003|times differ — en only: 5 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 5 p.m. / 17 ч. 00 м."
+  },
+  "16|34|BI001|numbers differ — ru only: 18, 15": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 6:15 p.m. / 18 ч. 15 м."
+  },
+  "16|34|BI003|times differ — en only: 6:15 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 6:15 p.m. / 18 ч. 15 м."
+  },
+  "16|35|BI001|numbers differ — en only: 11": {
+    "verdict": "false",
+    "note": "11th in digits against words"
+  },
+  "17|2|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "17|2|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "17|9|BI001|numbers differ — en only: 12.23 · ru only: 12, 23": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 12.23 p.m. / 12 ч. 23 м."
+  },
+  "17|14|BI001|numbers differ — ru only: 15, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "17|14|BI003|times differ — en only: 3 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "17|20|BI001|numbers differ — ru only: 6": {
+    "verdict": "false",
+    "note": "stray footnote number at the start of the Russian line"
+  },
+  "17|26|BI001|numbers differ — en only: 75": {
+    "verdict": "real",
+    "note": "the Act's number 75 is absent from the Russian"
+  },
+  "18|23|BI001|numbers differ — en only: 22 · ru only: 21": {
+    "verdict": "real",
+    "note": "English says 22 countries, Russian says 21"
+  },
+  "19|14|BI001|numbers differ — en only: 10.30 · ru only: 10, 30": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10.30 a.m. / 10 ч. 30 м."
+  },
+  "19|32|BI001|numbers differ — en only: 0300 · ru only: 03, 00": {
+    "verdict": "false",
+    "note": "same clock time, 0300 against 03 h 00"
+  },
+  "19|37|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "19|37|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "20|5|BI005|durations differ — ru only: 50": {
+    "verdict": "false",
+    "note": "five decades against 50 years"
+  },
+  "20|9|BI001|numbers differ — en only: 10.07 · ru only: 10, 07": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10.07 a.m. / 10 ч. 07 м."
+  },
+  "21|12|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "21|12|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "21|14|BI001|numbers differ — ru only: 15, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "21|14|BI003|times differ — en only: 3 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "22|3|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "22|3|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "22|12|BI001|numbers differ — ru only: 15, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "22|12|BI003|times differ — en only: 3 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3 p.m. / 15 ч. 00 м."
+  },
+  "22|14|BI001|numbers differ — ru only: 2011": {
+    "verdict": "false",
+    "note": "same years; English glues them to the preceding word"
+  },
+  "22|14|BI005|durations differ — ru only: 2012": {
+    "verdict": "false",
+    "note": "same years; English glues them to the preceding word"
+  },
+  "22|25|BI001|numbers differ — en only: 10.15 · ru only: 10, 15": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10.15 a.m. / 10 ч. 15 м."
+  },
+  "22|26|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "22|26|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "26|30|BI001|numbers differ — en only: 60": {
+    "verdict": "false",
+    "note": "60th in digits against words"
+  },
+  "27|19|BI001|numbers differ — en only: 9.30 · ru only: 09, 30": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 9.30 a.m. / 09 ч. 30 м."
+  },
+  "28|13|BI001|numbers differ — en only: 2014, 2015 · ru only: 20142015": {
+    "verdict": "false",
+    "note": "same biennium; Russian lost the hyphen"
+  },
+  "30|28|BI001|numbers differ — ru only: 10, 00, 13, 00, 15, 00, 18, 00": {
+    "verdict": "false",
+    "note": "same clock times in two notations"
+  },
+  "30|28|BI003|times differ — en only: 10 a.m., 1 p.m., 3 p.m., 6 p.m.": {
+    "verdict": "false",
+    "note": "same clock times in two notations"
+  },
+  "32|18|BI001|numbers differ — en only: 2014, 2019": {
+    "verdict": "false",
+    "note": "same years; Russian lost the hyphen"
+  },
+  "32|18|BI005|durations differ — ru only: 20142019": {
+    "verdict": "false",
+    "note": "same years; Russian lost the hyphen"
+  },
+  "34|31|BI001|numbers differ — en only: 34, 35, 45 · ru only: 37, 38, 48": {
+    "verdict": "real",
+    "note": "page references differ: pp. 34-35, 45 against 37-38, 48 (each edition's own pagination)"
+  },
+  "35|25|BI001|numbers differ — en only: 3": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "36|10|BI001|numbers differ — en only: 1": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "36|15|BI001|numbers differ — ru only: 45 000": {
+    "verdict": "false",
+    "note": "same amount; English glues the currency sign to the number"
+  },
+  "36|38|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "36|38|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "37|2|BI001|numbers differ — en only: 28 · ru only: 31": {
+    "verdict": "real",
+    "note": "page reference differs: p. 28 against p. 31 (each edition's own pagination)"
+  },
+  "38|7|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "38|7|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "38|31|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "38|31|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "39|9|BI001|numbers differ — en only: 10.44 · ru only: 10, 44": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10.44 a.m. / 10 ч. 44 м."
+  },
+  "39|11|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "39|11|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "39|17|BI005|durations differ — ru only: 2014": {
+    "verdict": "false",
+    "note": "same year inside a report title"
+  },
+  "41|25|BI001|numbers differ — en only: 235": {
+    "verdict": "false",
+    "note": "U-235 against U235"
+  },
+  "42|17|BI001|numbers differ — en only: 3.05 · ru only: 15, 05": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 3.05 p.m. / 15 ч. 05 м."
+  },
+  "42|33|BI005|durations differ — ru only: 2013": {
+    "verdict": "false",
+    "note": "the year is stated on both sides"
+  },
+  "43|15|BI001|numbers differ — ru only: 5819": {
+    "verdict": "false",
+    "note": "same amount: 5,819,000 against 5819 thousand"
+  },
+  "43|15|BI002|amounts differ — en only: 5,819,000": {
+    "verdict": "false",
+    "note": "same amount: 5,819,000 against 5819 thousand"
+  },
+  "43|16|BI001|numbers differ — en only: 13": {
+    "verdict": "false",
+    "note": "13 in digits against words"
+  },
+  "47|12|BI001|numbers differ — en only: 18": {
+    "verdict": "false",
+    "note": "footnote mark present on one side only"
+  },
+  "48|30|BI001|numbers differ — en only: 1564 · ru only: 15": {
+    "verdict": "false",
+    "note": "same age range; English lost the hyphen"
+  },
+  "48|30|BI005|durations differ — ru only: 64": {
+    "verdict": "false",
+    "note": "same age range; English lost the hyphen"
+  },
+  "49|0|BI005|durations differ — ru only: 2015": {
+    "verdict": "false",
+    "note": "post-2015 against the period after 2015"
+  },
+  "51|1|BI002|amounts differ — en only: 1": {
+    "verdict": "false",
+    "note": "1 dollar in digits against words"
+  },
+  "51|3|BI001|numbers differ — ru only: 201": {
+    "verdict": "false",
+    "note": "paragraph number written with and without a full stop"
+  },
+  "52|38|BI001|numbers differ — ru only: 11, 00, 13, 00": {
+    "verdict": "false",
+    "note": "same clock times in two notations"
+  },
+  "52|38|BI003|times differ — en only: 11 a.m., 1 p.m.": {
+    "verdict": "false",
+    "note": "same clock times in two notations"
+  },
+  "53|16|BI001|numbers differ — en only: 6": {
+    "verdict": "false",
+    "note": "6 in digits against words"
+  },
+  "53|22|BI001|numbers differ — en only: 1": {
+    "verdict": "false",
+    "note": "Year 1 against first year"
+  },
+  "54|6|BI001|numbers differ — en only: 20142015 · ru only: 2014": {
+    "verdict": "false",
+    "note": "same biennium; English lost the hyphen"
+  },
+  "54|6|BI005|durations differ — ru only: 2015": {
+    "verdict": "false",
+    "note": "same biennium; English lost the hyphen"
+  },
+  "54|17|BI001|numbers differ — en only: 3": {
+    "verdict": "false",
+    "note": "post level P-3 written with and without a hyphen"
+  },
+  "54|25|BI001|numbers differ — ru only: 69": {
+    "verdict": "false",
+    "note": "sixty-ninth in words against digits"
+  },
+  "56|11|BI001|numbers differ — en only: 2014": {
+    "verdict": "real",
+    "note": "the year 2014 of the event is absent from the Russian"
+  },
+  "57|35|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "57|35|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "58|2|BI001|numbers differ — en only: 2014.42 · ru only: 2014": {
+    "verdict": "false",
+    "note": "footnote mark attached to the year"
+  },
+  "59|1|BI005|durations differ — en only: 10": {
+    "verdict": "false",
+    "note": "10-year in digits against words"
+  },
+  "59|14|BI001|numbers differ — en only: 1310 · ru only: 13, 10": {
+    "verdict": "false",
+    "note": "same clock time, 1310 against 13 h 10"
+  },
+  "59|22|BI001|numbers differ — ru only: 26": {
+    "verdict": "false",
+    "note": "same day; the difference is the missing year, judged under the date finding"
+  },
+  "59|22|BI003|dates differ — en only: 26 March 2014": {
+    "verdict": "real",
+    "note": "the Russian line stops before the year 2014"
+  },
+  "59|23|BI001|numbers differ — en only: 22": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "59|32|BI003|times differ — en only: 10 p.m.": {
+    "verdict": "false",
+    "note": "10 p.m. against 22 hours"
+  },
+  "59|32|BI005|durations differ — ru only: 22": {
+    "verdict": "false",
+    "note": "10 p.m. against 22 hours"
+  },
+  "60|8|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "60|8|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations: 10 a.m. / 10 ч. 00 м."
+  },
+  "60|21|BI001|numbers differ — en only: 1, 2": {
+    "verdict": "false",
+    "note": "building names DC-1, DC-2 written with and without a hyphen"
+  },
+  "61|3|BI005|durations differ — ru only: 2015": {
+    "verdict": "false",
+    "note": "post-2015 against the period after 2015"
+  },
+  "64|30|BI001|numbers differ — ru only: 1": {
+    "verdict": "false",
+    "note": "first in words against digits"
+  },
+  "64|39|BI003|dates differ — en only: 11 March 2015": {
+    "verdict": "real",
+    "note": "the Russian line stops before the date and the time"
+  },
+  "64|39|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "real",
+    "note": "the Russian line stops before the date and the time"
+  },
+  "65|12|BI001|numbers differ — en only: 4": {
+    "verdict": "false",
+    "note": "post level P-4 written with and without a hyphen"
+  },
+  "65|31|BI001|numbers differ — en only: 2015": {
+    "verdict": "real",
+    "note": "the Russian line carries no year"
+  },
+  "67|6|BI001|numbers differ — en only: 2012": {
+    "verdict": "real",
+    "note": "English says 2012 for the third figure, Russian says 2011"
+  },
+  "67|6|BI005|durations differ — ru only: 2011": {
+    "verdict": "real",
+    "note": "English says 2012 for the third figure, Russian says 2011"
+  },
+  "70|23|BI001|numbers differ — en only: 21, 21": {
+    "verdict": "false",
+    "note": "Agenda 21 against the Roman numeral"
+  },
+  "71|34|BI001|numbers differ — ru only: 69": {
+    "verdict": "false",
+    "note": "sixty-ninth in words against digits"
+  },
+  "72|7|BI001|numbers differ — ru only: 10, 00, 13, 00": {
+    "verdict": "false",
+    "note": "same clock times in two notations; the missing times are judged under the time finding"
+  },
+  "72|7|BI003|times differ — en only: 10 a.m., 1 p.m., 3 p.m., 6 p.m.": {
+    "verdict": "real",
+    "note": "the Russian line stops before the afternoon times"
+  },
+  "73|12|BI005|durations differ — ru only: 2014": {
+    "verdict": "false",
+    "note": "same year inside a report title"
+  },
+  "74|22|BI001|numbers differ — ru only: 10, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations"
+  },
+  "74|22|BI003|times differ — en only: 10 a.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations"
+  },
+  "75|13|BI001|numbers differ — ru only: 00": {
+    "verdict": "false",
+    "note": "same clock time, 0000 against 00 h 00"
+  },
+  "76|10|BI001|numbers differ — en only: 2359 · ru only: 59": {
+    "verdict": "false",
+    "note": "same clock time, 2359Z against 23 h 59"
+  },
+  "76|10|BI005|durations differ — ru only: 23": {
+    "verdict": "false",
+    "note": "same clock time, 2359Z against 23 h 59"
+  },
+  "78|6|BI001|numbers differ — en only: 1540, 2004": {
+    "verdict": "false",
+    "note": "English repeats the resolution number, Russian refers back to it"
+  },
+  "78|34|BI001|numbers differ — ru only: 131, 33": {
+    "verdict": "false",
+    "note": "same amounts; English glues the currency word to the number"
+  },
+  "79|6|BI001|numbers differ — ru only: 6, 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "79|6|BI003|dates differ — en only: 6 February 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "80|29|BI001|numbers differ — en only: 15": {
+    "verdict": "false",
+    "note": "English repeats the 15-day limit, Russian refers back to it"
+  },
+  "83|9|BI001|numbers differ — ru only: 21, 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "83|9|BI003|dates differ — en only: 21 January 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "84|10|BI001|numbers differ — ru only: 29, 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "84|10|BI003|dates differ — en only: 29 January 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "85|9|BI004|digits and words disagree on the en side — 2005 against \"ten\"": {
+    "verdict": "false",
+    "note": "a title (Plus Ten) followed by a year, not an amount in words"
+  },
+  "85|9|BI004|digits and words disagree on the en side — 2010 against \"fifteen\"": {
+    "verdict": "false",
+    "note": "a title (Plus Ten) followed by a year, not an amount in words"
+  },
+  "85|30|BI001|numbers differ — en only: 3": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "87|5|BI001|numbers differ — ru only: 5, 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "87|5|BI003|dates differ — en only: 5 February 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "87|35|BI001|numbers differ — en only: 14 · ru only: 15": {
+    "verdict": "real",
+    "note": "page reference differs: p. 14 against p. 15 (each edition's own pagination)"
+  },
+  "88|23|BI003|dates differ — ru only: 22 января 2015": {
+    "verdict": "real",
+    "note": "the English line stops before the date"
+  },
+  "89|28|BI001|numbers differ — en only: 1": {
+    "verdict": "false",
+    "note": "day 1 against first day"
+  },
+  "89|39|BI001|numbers differ — en only: 2014": {
+    "verdict": "false",
+    "note": "same year; English leaves out the day of the second date"
+  },
+  "89|39|BI003|dates differ — ru only: 31 декабря 2014": {
+    "verdict": "false",
+    "note": "same date; English leaves out the day of the second date"
+  },
+  "92|11|BI001|numbers differ — en only: 4": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "92|18|BI001|numbers differ — en only: 91.37": {
+    "verdict": "real",
+    "note": "the figure 91.37 per cent is absent from the Russian"
+  },
+  "92|34|BI001|numbers differ — ru only: 20": {
+    "verdict": "false",
+    "note": "Beijing +20; Russian also spells out the 20-year review"
+  },
+  "93|0|BI001|numbers differ — en only: 235, 235, 235": {
+    "verdict": "false",
+    "note": "U-235 against U235"
+  },
+  "95|23|BI001|numbers differ — en only: 1100 · ru only: 11, 00, 12, 00": {
+    "verdict": "false",
+    "note": "same clock times, 1100 and 1200 against 11 h 00 and 12 h 00"
+  },
+  "95|23|BI005|durations differ — en only: 1200": {
+    "verdict": "false",
+    "note": "same clock times, 1100 and 1200 against 11 h 00 and 12 h 00"
+  },
+  "95|34|BI001|numbers differ — en only: 26.73 · ru only: 26.743": {
+    "verdict": "real",
+    "note": "the law's number differs: 26.73 against 26.743"
+  },
+  "97|6|BI001|numbers differ — en only: 7, 8": {
+    "verdict": "false",
+    "note": "7 and 8 in digits against words"
+  },
+  "98|17|BI005|durations differ — ru only: 2003": {
+    "verdict": "real",
+    "note": "the year 2003 is absent from the English"
+  },
+  "98|23|BI001|numbers differ — en only: 2013": {
+    "verdict": "real",
+    "note": "the two lines are different text; the year appears only in English"
+  },
+  "98|25|BI001|numbers differ — ru only: 15, 00": {
+    "verdict": "false",
+    "note": "same clock time in two notations"
+  },
+  "98|25|BI003|times differ — en only: 3 p.m.": {
+    "verdict": "false",
+    "note": "same clock time in two notations"
+  },
+  "99|14|BI001|numbers differ — ru only: 1": {
+    "verdict": "false",
+    "note": "Daiichi against the numeral 1 in the plant's name"
+  }
+}

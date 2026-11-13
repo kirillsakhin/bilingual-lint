@@ -1,0 +1,3842 @@
+{
+ "part": "contracts",
+ "scored_on": "2026-11-13",
+ "commit": "273be5633cf38d2ac4519335d8b246d869ddc3a3",
+ "version": "0.1.1",
+ "seed": 20261113,
+ "limit": null,
+ "per_operator": null,
+ "data_sha256": null,
+ "summary": {
+  "documents": 3,
+  "pairs": 45,
+  "operators": {
+   "digit": {
+    "planted": 38,
+    "expected": 38,
+    "any": 38,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "date": {
+    "planted": 14,
+    "expected": 14,
+    "any": 14,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "reference": {
+    "planted": 8,
+    "expected": 8,
+    "any": 8,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "currency": {
+    "planted": 14,
+    "expected": 13,
+    "any": 13,
+    "recall_expected": 0.9286,
+    "recall_any": 0.9286
+   },
+   "day_type": {
+    "planted": 13,
+    "expected": 12,
+    "any": 12,
+    "recall_expected": 0.9231,
+    "recall_any": 0.9231
+   },
+   "negation": {
+    "planted": 10,
+    "expected": 4,
+    "any": 4,
+    "recall_expected": 0.4,
+    "recall_any": 0.4
+   },
+   "prevailing": {
+    "planted": 6,
+    "expected": 6,
+    "any": 6,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "identifier": {
+    "planted": 6,
+    "expected": 6,
+    "any": 6,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "party": {
+    "planted": 25,
+    "expected": 25,
+    "any": 25,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   },
+   "drop": {
+    "planted": 78,
+    "expected": 78,
+    "any": 78,
+    "recall_expected": 1.0,
+    "recall_any": 1.0
+   }
+  },
+  "figures": {
+   "planted": 72,
+   "caught": 71,
+   "recall": 0.9861
+  },
+  "paragraphs": {
+   "planted": 78,
+   "caught": 78,
+   "recall": 1.0
+  },
+  "clean_flags_per_100_pairs": {
+   "error": 0.0,
+   "warning": 0.0,
+   "info": 6.67
+  },
+  "pairing_accuracy": 1.0,
+  "pairing_accuracy_one_missing": 1.0
+ },
+ "adjudication": {
+  "error_findings": 0,
+  "real": 0,
+  "false": 0,
+  "open": 0,
+  "false_per_100_pairs": 0.0
+ },
+ "targets": [
+  [
+   "figures_recall",
+   0.9861,
+   0.98,
+   true
+  ],
+  [
+   "paragraphs_recall",
+   1.0,
+   0.95,
+   true
+  ],
+  [
+   "error_flags_per_100_pairs",
+   0.0,
+   3.0,
+   true
+  ],
+  [
+   "pairing_accuracy",
+   1.0,
+   0.95,
+   true
+  ]
+ ],
+ "results": [
+  {
+   "pairs": 15,
+   "clean_findings": [
+    [
+     "BI011",
+     "info",
+     5,
+     "negation on the ru side only — check the meaning"
+    ],
+    [
+     "BI011",
+     "info",
+     10,
+     "an obligation on the en side reads as a permission on the ru side — check the meaning"
+    ]
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 0,
+     "side": "a",
+     "before": "27",
+     "after": "22",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI001"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 0,
+     "side": "b",
+     "before": "27",
+     "after": "26",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI001"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 1,
+     "side": "a",
+     "before": "2025",
+     "after": "2029",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 1,
+     "side": "b",
+     "before": "2025",
+     "after": "2925",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 4,
+     "side": "a",
+     "before": "2026",
+     "after": "2076",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 4,
+     "side": "b",
+     "before": "2025",
+     "after": "2015",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 6,
+     "side": "a",
+     "before": "15",
+     "after": "35",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 6,
+     "side": "b",
+     "before": "15",
+     "after": "85",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 11,
+     "side": "a",
+     "before": "60",
+     "after": "30",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 11,
+     "side": "b",
+     "before": "60",
+     "after": "67",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "a",
+     "before": "5263018847",
+     "after": "5263098847",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "b",
+     "before": "5263018847",
+     "after": "5263018947",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 1,
+     "side": "a",
+     "before": "4",
+     "after": "14",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 1,
+     "side": "b",
+     "before": "4",
+     "after": "23",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 4,
+     "side": "a",
+     "before": "1",
+     "after": "17",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 4,
+     "side": "b",
+     "before": "30",
+     "after": "9",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "reference",
+     "row": 7,
+     "side": "a",
+     "before": "clause 2.2",
+     "after": "clause 2.9",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI006"
+     ]
+    },
+    {
+     "operator": "reference",
+     "row": 7,
+     "side": "b",
+     "before": "п. 2.2",
+     "after": "п. 2.3",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI006"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 5,
+     "side": "a",
+     "before": "EUR",
+     "after": "USD",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 5,
+     "side": "b",
+     "before": "евро",
+     "after": "долларов США",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 10,
+     "side": "a",
+     "before": "EUR",
+     "after": "USD",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 10,
+     "side": "b",
+     "before": "евро",
+     "after": "долларов США",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 6,
+     "side": "a",
+     "before": "business ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 6,
+     "side": "b",
+     "before": "рабочих ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 9,
+     "side": "a",
+     "before": "working ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 9,
+     "side": "b",
+     "before": "рабочих ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "negation",
+     "row": 8,
+     "side": "a",
+     "before": " not",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": false,
+     "caught_any": false,
+     "top_severity": null,
+     "rules": []
+    },
+    {
+     "operator": "negation",
+     "row": 8,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": false,
+     "caught_any": false,
+     "top_severity": null,
+     "rules": []
+    },
+    {
+     "operator": "negation",
+     "row": 10,
+     "side": "a",
+     "before": " not",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "info",
+     "rules": [
+      "BI011"
+     ]
+    },
+    {
+     "operator": "negation",
+     "row": 10,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "info",
+     "rules": [
+      "BI011"
+     ]
+    },
+    {
+     "operator": "prevailing",
+     "row": 13,
+     "side": "a",
+     "before": "English",
+     "after": "Russian",
+     "expected": [
+      "BI010"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI010"
+     ]
+    },
+    {
+     "operator": "prevailing",
+     "row": 13,
+     "side": "b",
+     "before": "английском",
+     "after": "русском",
+     "expected": [
+      "BI010"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI010"
+     ]
+    },
+    {
+     "operator": "identifier",
+     "row": 12,
+     "side": "a",
+     "before": "DE44 5001 0517 5407 3249 31",
+     "after": "DE44 5001 0517 5407 3249 30",
+     "expected": [
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "identifier",
+     "row": 12,
+     "side": "b",
+     "before": "5263018847",
+     "after": "5263018843",
+     "expected": [
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 3,
+     "side": "a",
+     "before": "Contractor",
+     "after": "Customer",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 3,
+     "side": "b",
+     "before": "Исполнитель",
+     "after": "Заказчик",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 6,
+     "side": "a",
+     "before": "Customer",
+     "after": "Contractor",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 6,
+     "side": "b",
+     "before": "Заказчик",
+     "after": "Исполнитель",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 8,
+     "side": "b",
+     "before": "Исполнитель",
+     "after": "Заказчик",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 9,
+     "side": "b",
+     "before": "Исполнитель",
+     "after": "Заказчик",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 10,
+     "side": "a",
+     "before": "Contractor",
+     "after": "Customer",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 12,
+     "side": "a",
+     "before": "Contractor",
+     "after": "Customer",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 2,
+     "side": "a",
+     "before": "Orion Data LLC (the \"Customer\") and Meridian Soft GmbH (the \"Contractor\") have agreed as follows.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 2,
+     "side": "b",
+     "before": "ООО «Орион Дата» (далее – «Заказчик») и Meridian Soft GmbH (далее – «Исполнитель») договорились о нижеследующем.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 3,
+     "side": "a",
+     "before": "1.1. The Contractor shall provide the software support services listed in Annex 1.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 3,
+     "side": "b",
+     "before": "1.1. Исполнитель обязуется оказать услуги по сопровождению программного обеспечения, перечисленные в Приложении 1.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "a",
+     "before": "1.2. The services shall be provided from 1 October 2025 to 30 September 2026.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "b",
+     "before": "1.2. Услуги оказываются с 1 октября 2025 года по 30 сентября 2026 года.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "a",
+     "before": "2.1. The monthly fee is EUR 12,500 (twelve thousand five hundred euros), excluding VAT.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "b",
+     "before": "2.1. Ежемесячное вознаграждение составляет 12 500 (двенадцать тысяч пятьсот) евро без учёта НДС.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "a",
+     "before": "2.2. The Customer shall pay each invoice within 15 (fifteen) business days of receipt.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "b",
+     "before": "2.2. Заказчик обязан оплатить каждый счёт в течение 15 (пятнадцати) рабочих дней с даты его получения.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 7,
+     "side": "a",
+     "before": "2.3. Late payment bears interest at 0.05% of the overdue amount per day, as provided in clause 2.2.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 7,
+     "side": "b",
+     "before": "2.3. За просрочку оплаты начисляются пени в размере 0,05% от просроченной суммы за каждый день согласно п. 2.2.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 8,
+     "side": "a",
+     "before": "3.1. The Contractor may not engage subcontractors without the prior written consent of the Customer.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 8,
+     "side": "b",
+     "before": "3.1. Исполнитель не вправе привлекать субподрядчиков без предварительного письменного согласия Заказчика.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 9,
+     "side": "a",
+     "before": "3.2. The Contractor shall remedy any defect in the services within 5 (five) working days of the Customer's notice.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 9,
+     "side": "b",
+     "before": "3.2. Исполнитель обязан устранить любой недостаток услуг в течение 5 (пяти) рабочих дней с даты уведомления Заказчика.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 10,
+     "side": "a",
+     "before": "4.1. The liability of the Contractor under this Agreement shall not exceed EUR 150,000.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 10,
+     "side": "b",
+     "before": "4.1. Ответственность Исполнителя по Договору не может превышать 150 000 евро.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 11,
+     "side": "a",
+     "before": "5.1. Either party may terminate this Agreement by giving 60 (sixty) days' written notice.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 11,
+     "side": "b",
+     "before": "5.1. Любая из сторон вправе расторгнуть Договор, направив письменное уведомление за 60 (шестьдесят) дней.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 12,
+     "side": "a",
+     "before": "6.1. Bank details of the Contractor: IBAN DE44 5001 0517 5407 3249 31, registration number 5263018847.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 12,
+     "side": "b",
+     "before": "6.1. Банковские реквизиты Исполнителя: IBAN DE44 5001 0517 5407 3249 31, регистрационный номер 5263018847.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 13,
+     "side": "a",
+     "before": "7.1. This Agreement is made in English and Russian. In case of discrepancy the English text shall prevail.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 13,
+     "side": "b",
+     "before": "7.1. Договор составлен на английском и русском языках. В случае расхождений преимущество имеет текст на английском языке.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 14,
+     "side": "a",
+     "before": "7.2. This Agreement is made in 2 (two) copies, one for each party.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 14,
+     "side": "b",
+     "before": "7.2. Договор составлен в 2 (двух) экземплярах, по одному для каждой из сторон.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    }
+   ],
+   "pairing": {
+    "right": 15,
+    "total": 15
+   },
+   "pairing_one_missing": {
+    "right": 28,
+    "total": 28
+   }
+  },
+  {
+   "pairs": 15,
+   "clean_findings": [
+    [
+     "BI011",
+     "info",
+     10,
+     "an obligation on the en side reads as a permission on the ru side — check the meaning"
+    ]
+   ],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 1,
+     "side": "a",
+     "before": "17",
+     "after": "19",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 1,
+     "side": "b",
+     "before": "2026",
+     "after": "2926",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 7,
+     "side": "a",
+     "before": "2029",
+     "after": "2129",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 7,
+     "side": "b",
+     "before": "17",
+     "after": "27",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 11,
+     "side": "a",
+     "before": "30",
+     "after": "40",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 11,
+     "side": "b",
+     "before": "30",
+     "after": "37",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "a",
+     "before": "6016",
+     "after": "6096",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "b",
+     "before": "6016",
+     "after": "6019",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 1,
+     "side": "a",
+     "before": "17",
+     "after": "13",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 1,
+     "side": "b",
+     "before": "17",
+     "after": "23",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 7,
+     "side": "a",
+     "before": "17",
+     "after": "28",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 7,
+     "side": "b",
+     "before": "17",
+     "after": "4",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "reference",
+     "row": 9,
+     "side": "a",
+     "before": "clause 2.1",
+     "after": "clause 2.3",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI006"
+     ]
+    },
+    {
+     "operator": "reference",
+     "row": 9,
+     "side": "b",
+     "before": "п. 2.1",
+     "after": "п. 2.5",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI006"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 3,
+     "side": "a",
+     "before": "US dollars",
+     "after": "euros",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": false,
+     "caught_any": false,
+     "top_severity": null,
+     "rules": []
+    },
+    {
+     "operator": "currency",
+     "row": 3,
+     "side": "b",
+     "before": "долларов США",
+     "after": "евро",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 8,
+     "side": "a",
+     "before": "USD",
+     "after": "EUR",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 8,
+     "side": "b",
+     "before": "долларов США",
+     "after": "евро",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 10,
+     "side": "a",
+     "before": "USD",
+     "after": "EUR",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 10,
+     "side": "b",
+     "before": "долларов США",
+     "after": "евро",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 4,
+     "side": "a",
+     "before": "banking ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 4,
+     "side": "b",
+     "before": "банковских ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 6,
+     "side": "a",
+     "before": "business ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": false,
+     "caught_any": false,
+     "top_severity": null,
+     "rules": []
+    },
+    {
+     "operator": "day_type",
+     "row": 14,
+     "side": "a",
+     "before": "business ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 14,
+     "side": "b",
+     "before": "рабочих ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "negation",
+     "row": 10,
+     "side": "a",
+     "before": " not",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": false,
+     "caught_any": false,
+     "top_severity": null,
+     "rules": []
+    },
+    {
+     "operator": "negation",
+     "row": 10,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": false,
+     "caught_any": false,
+     "top_severity": null,
+     "rules": []
+    },
+    {
+     "operator": "prevailing",
+     "row": 13,
+     "side": "a",
+     "before": "Russian",
+     "after": "English",
+     "expected": [
+      "BI010"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI010"
+     ]
+    },
+    {
+     "operator": "prevailing",
+     "row": 13,
+     "side": "b",
+     "before": "русском",
+     "after": "английском",
+     "expected": [
+      "BI010"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI010"
+     ]
+    },
+    {
+     "operator": "identifier",
+     "row": 12,
+     "side": "a",
+     "before": "GB29 NWBK 6016 1331 9268 19",
+     "after": "GB29 NWBK 6016 1331 9268 10",
+     "expected": [
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "identifier",
+     "row": 12,
+     "side": "b",
+     "before": "104417750032",
+     "after": "104417750034",
+     "expected": [
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 3,
+     "side": "b",
+     "before": "Займодавец",
+     "after": "Заёмщик",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 7,
+     "side": "a",
+     "before": "Borrower",
+     "after": "Lender",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 7,
+     "side": "b",
+     "before": "Заёмщик",
+     "after": "Займодавец",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 8,
+     "side": "a",
+     "before": "Borrower",
+     "after": "Lender",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 8,
+     "side": "b",
+     "before": "Заёмщик",
+     "after": "Займодавец",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 9,
+     "side": "a",
+     "before": "Borrower",
+     "after": "Lender",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 9,
+     "side": "b",
+     "before": "Заёмщик",
+     "after": "Займодавец",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 10,
+     "side": "b",
+     "before": "Заёмщик",
+     "after": "Займодавец",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 12,
+     "side": "a",
+     "before": "Lender",
+     "after": "Borrower",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 2,
+     "side": "a",
+     "before": "Cedar Capital Ltd (the \"Lender\") and Polar Logistics LLP (the \"Borrower\") have agreed as follows.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 2,
+     "side": "b",
+     "before": "Cedar Capital Ltd (далее – «Займодавец») и ТОО «Полар Логистикс» (далее – «Заёмщик») договорились о нижеследующем.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 3,
+     "side": "a",
+     "before": "1.1. The Lender shall lend the Borrower USD 400,000 (four hundred thousand US dollars).",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 3,
+     "side": "b",
+     "before": "1.1. Займодавец предоставляет Заёмщику заём в размере 400 000 (четыреста тысяч) долларов США.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "a",
+     "before": "1.2. The loan shall be disbursed within 3 (three) banking days after the date of this Agreement.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "b",
+     "before": "1.2. Заём предоставляется в течение 3 (трёх) банковских дней с даты заключения Договора.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "a",
+     "before": "2.1. Interest accrues at 9.5% per annum on the outstanding amount of the loan.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "b",
+     "before": "2.1. На непогашенную сумму займа начисляются проценты по ставке 9,5% годовых.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "a",
+     "before": "2.2. Interest is payable on the last business day of each calendar quarter.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "b",
+     "before": "2.2. Проценты уплачиваются в последний рабочий день каждого календарного квартала.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 7,
+     "side": "a",
+     "before": "3.1. The Borrower shall repay the loan in full not later than 17 February 2029.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 7,
+     "side": "b",
+     "before": "3.1. Заёмщик обязан полностью возвратить заём не позднее 17 февраля 2029 года.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 8,
+     "side": "a",
+     "before": "3.2. The Borrower may repay the loan early in instalments of not less than USD 50,000.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 8,
+     "side": "b",
+     "before": "3.2. Заёмщик вправе досрочно возвращать заём частями не менее 50 000 долларов США.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 9,
+     "side": "a",
+     "before": "3.3. If repayment is delayed, the Borrower shall pay a penalty of 0.1% of the overdue amount per day, in addition to the interest under clause 2.1.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 9,
+     "side": "b",
+     "before": "3.3. При просрочке возврата Заёмщик уплачивает неустойку в размере 0,1% от просроченной суммы за каждый день сверх процентов, предусмотренных п. 2.1.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 10,
+     "side": "a",
+     "before": "4.1. The Borrower must not dispose of its fixed assets worth more than USD 100,000 without the consent of the Lender.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 10,
+     "side": "b",
+     "before": "4.1. Заёмщик не вправе отчуждать основные средства стоимостью свыше 100 000 долларов США без согласия Займодавца.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 11,
+     "side": "a",
+     "before": "4.2. The Lender may demand early repayment if the Borrower is more than 30 (thirty) days late with any payment.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 11,
+     "side": "b",
+     "before": "4.2. Займодавец вправе потребовать досрочного возврата займа, если Заёмщик допустил просрочку любого платежа более чем на 30 (тридцать) дней.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 12,
+     "side": "a",
+     "before": "5.1. Account of the Lender: IBAN GB29 NWBK 6016 1331 9268 19, company number 104417750032.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 12,
+     "side": "b",
+     "before": "5.1. Счёт Займодавца: IBAN GB29 NWBK 6016 1331 9268 19, регистрационный номер компании 104417750032.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 13,
+     "side": "a",
+     "before": "6.1. This Agreement is made in English and Russian. In case of discrepancy the Russian text shall prevail.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 13,
+     "side": "b",
+     "before": "6.1. Договор составлен на английском и русском языках. В случае расхождений преимущество имеет текст на русском языке.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 14,
+     "side": "a",
+     "before": "6.2. Notices shall be sent within 5 (five) business days to the addresses stated in this Agreement.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 14,
+     "side": "b",
+     "before": "6.2. Уведомления направляются в течение 5 (пяти) рабочих дней по адресам, указанным в Договоре.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    }
+   ],
+   "pairing": {
+    "right": 15,
+    "total": 15
+   },
+   "pairing_one_missing": {
+    "right": 28,
+    "total": 28
+   }
+  },
+  {
+   "pairs": 15,
+   "clean_findings": [],
+   "cases": [
+    {
+     "operator": "digit",
+     "row": 0,
+     "side": "a",
+     "before": "112",
+     "after": "132",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI001"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 0,
+     "side": "b",
+     "before": "112",
+     "after": "172",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI001"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 1,
+     "side": "a",
+     "before": "23",
+     "after": "29",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 1,
+     "side": "b",
+     "before": "2025",
+     "after": "2925",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 3,
+     "side": "a",
+     "before": "340",
+     "after": "640",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI001"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 3,
+     "side": "b",
+     "before": "340",
+     "after": "640",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI001"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 4,
+     "side": "a",
+     "before": "2025",
+     "after": "2065",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 4,
+     "side": "b",
+     "before": "36",
+     "after": "31",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 6,
+     "side": "a",
+     "before": "10",
+     "after": "30",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 6,
+     "side": "b",
+     "before": "10",
+     "after": "80",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 10,
+     "side": "a",
+     "before": "20",
+     "after": "90",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 10,
+     "side": "b",
+     "before": "20",
+     "after": "70",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 11,
+     "side": "a",
+     "before": "90",
+     "after": "30",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 11,
+     "side": "b",
+     "before": "90",
+     "after": "97",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI004",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "a",
+     "before": "0417",
+     "after": "0497",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 12,
+     "side": "b",
+     "before": "0417",
+     "after": "0419",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 14,
+     "side": "a",
+     "before": "30",
+     "after": "80",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI001",
+      "BI003"
+     ]
+    },
+    {
+     "operator": "digit",
+     "row": 14,
+     "side": "b",
+     "before": "30",
+     "after": "60",
+     "expected": [
+      "BI001",
+      "BI002",
+      "BI003",
+      "BI004",
+      "BI005",
+      "BI006",
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI001",
+      "BI003",
+      "BI005"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 1,
+     "side": "a",
+     "before": "23",
+     "after": "13",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 1,
+     "side": "b",
+     "before": "23",
+     "after": "22",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 4,
+     "side": "a",
+     "before": "1",
+     "after": "17",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 4,
+     "side": "b",
+     "before": "1",
+     "after": "10",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 14,
+     "side": "a",
+     "before": "30",
+     "after": "23",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "date",
+     "row": 14,
+     "side": "b",
+     "before": "30",
+     "after": "21",
+     "expected": [
+      "BI003",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI003"
+     ]
+    },
+    {
+     "operator": "reference",
+     "row": 7,
+     "side": "a",
+     "before": "clause 2.1",
+     "after": "clause 2.9",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI006"
+     ]
+    },
+    {
+     "operator": "reference",
+     "row": 7,
+     "side": "b",
+     "before": "п. 2.1",
+     "after": "п. 2.3",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI006"
+     ]
+    },
+    {
+     "operator": "reference",
+     "row": 11,
+     "side": "a",
+     "before": "clause 2.2",
+     "after": "clause 2.8",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI006"
+     ]
+    },
+    {
+     "operator": "reference",
+     "row": 11,
+     "side": "b",
+     "before": "п. 2.2",
+     "after": "п. 2.7",
+     "expected": [
+      "BI006",
+      "BI001"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI006"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 5,
+     "side": "a",
+     "before": "euros",
+     "after": "US dollars",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 5,
+     "side": "b",
+     "before": "евро",
+     "after": "долларов США",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 6,
+     "side": "a",
+     "before": "euros",
+     "after": "US dollars",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "currency",
+     "row": 6,
+     "side": "b",
+     "before": "евро",
+     "after": "долларов США",
+     "expected": [
+      "BI002"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI002"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 6,
+     "side": "a",
+     "before": "banking ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 6,
+     "side": "b",
+     "before": "банковских ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 10,
+     "side": "a",
+     "before": "working ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "day_type",
+     "row": 10,
+     "side": "b",
+     "before": "рабочих ",
+     "after": "",
+     "expected": [
+      "BI005"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI005"
+     ]
+    },
+    {
+     "operator": "negation",
+     "row": 8,
+     "side": "a",
+     "before": " not",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "info",
+     "rules": [
+      "BI011"
+     ]
+    },
+    {
+     "operator": "negation",
+     "row": 8,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "info",
+     "rules": [
+      "BI011"
+     ]
+    },
+    {
+     "operator": "negation",
+     "row": 9,
+     "side": "a",
+     "before": " not",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": false,
+     "caught_any": false,
+     "top_severity": null,
+     "rules": []
+    },
+    {
+     "operator": "negation",
+     "row": 9,
+     "side": "b",
+     "before": "не ",
+     "after": "",
+     "expected": [
+      "BI011"
+     ],
+     "caught_expected": false,
+     "caught_any": false,
+     "top_severity": null,
+     "rules": []
+    },
+    {
+     "operator": "prevailing",
+     "row": 13,
+     "side": "a",
+     "before": "Russian",
+     "after": "English",
+     "expected": [
+      "BI010"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI010"
+     ]
+    },
+    {
+     "operator": "prevailing",
+     "row": 13,
+     "side": "b",
+     "before": "русском",
+     "after": "английском",
+     "expected": [
+      "BI010"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI010"
+     ]
+    },
+    {
+     "operator": "identifier",
+     "row": 12,
+     "side": "a",
+     "before": "NL91 ABNA 0417 1643 00",
+     "after": "NL91 ABNA 0417 1643 01",
+     "expected": [
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "identifier",
+     "row": 12,
+     "side": "b",
+     "before": "7701456982",
+     "after": "7701456984",
+     "expected": [
+      "BI009"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI009"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 3,
+     "side": "b",
+     "before": "Арендодатель",
+     "after": "Арендатор",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 6,
+     "side": "a",
+     "before": "Tenant",
+     "after": "Landlord",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 6,
+     "side": "b",
+     "before": "Арендатор",
+     "after": "Арендодатель",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 8,
+     "side": "a",
+     "before": "Tenant",
+     "after": "Landlord",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 8,
+     "side": "b",
+     "before": "Арендатор",
+     "after": "Арендодатель",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 9,
+     "side": "b",
+     "before": "Арендатор",
+     "after": "Арендодатель",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 10,
+     "side": "b",
+     "before": "Арендодатель",
+     "after": "Арендатор",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "party",
+     "row": 12,
+     "side": "a",
+     "before": "Landlord",
+     "after": "Tenant",
+     "expected": [
+      "BI008"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "warning",
+     "rules": [
+      "BI008"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 2,
+     "side": "a",
+     "before": "Harbour Estates JSC (the \"Landlord\") and Lumen Retail LLC (the \"Tenant\") have agreed as follows.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 2,
+     "side": "b",
+     "before": "АО «Харбор Эстейтс» (далее – «Арендодатель») и ООО «Люмен Ритейл» (далее – «Арендатор») договорились о нижеследующем.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 3,
+     "side": "a",
+     "before": "1.1. The Landlord shall lease to the Tenant office premises with an area of 340 square metres on the 6th floor.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 3,
+     "side": "b",
+     "before": "1.1. Арендодатель передаёт Арендатору в аренду офисное помещение площадью 340 квадратных метров на 6 этаже.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "a",
+     "before": "1.2. The lease term is 36 (thirty-six) months from 1 July 2025.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 4,
+     "side": "b",
+     "before": "1.2. Срок аренды составляет 36 (тридцать шесть) месяцев с 1 июля 2025 года.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "a",
+     "before": "2.1. The monthly rent is 8,200 euros, payable in advance not later than the 5th day of each month.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 5,
+     "side": "b",
+     "before": "2.1. Ежемесячная арендная плата составляет 8 200 евро и вносится авансом не позднее 5 числа каждого месяца.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "a",
+     "before": "2.2. The Tenant shall pay a security deposit of 24,600 euros within 10 (ten) banking days after signing.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 6,
+     "side": "b",
+     "before": "2.2. Арендатор вносит обеспечительный платёж в размере 24 600 евро в течение 10 (десяти) банковских дней после подписания.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 7,
+     "side": "a",
+     "before": "2.3. The rent may be increased once a year by not more than 4%, as provided in clause 2.1.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 7,
+     "side": "b",
+     "before": "2.3. Арендная плата может быть увеличена один раз в год не более чем на 4% в порядке, предусмотренном п. 2.1.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 8,
+     "side": "a",
+     "before": "3.1. The Tenant may not sublease the premises or any part of them.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 8,
+     "side": "b",
+     "before": "3.1. Арендатор не вправе передавать помещение или его часть в субаренду.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 9,
+     "side": "a",
+     "before": "3.2. The Tenant shall not carry out alterations without the written consent of the Landlord.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 9,
+     "side": "b",
+     "before": "3.2. Арендатор не должен производить перепланировку без письменного согласия Арендодателя.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 10,
+     "side": "a",
+     "before": "3.3. The Landlord shall carry out major repairs at its own expense within 20 (twenty) working days of the Tenant's request.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 10,
+     "side": "b",
+     "before": "3.3. Арендодатель обязан производить капитальный ремонт за свой счёт в течение 20 (двадцати) рабочих дней с даты обращения Арендатора.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 11,
+     "side": "a",
+     "before": "4.1. Either party may terminate this Agreement early by giving 90 (ninety) days' notice, subject to clause 2.2.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 11,
+     "side": "b",
+     "before": "4.1. Любая из сторон вправе досрочно расторгнуть Договор, уведомив другую сторону за 90 (девяносто) дней, с учётом п. 2.2.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 12,
+     "side": "a",
+     "before": "5.1. Rent is paid to the account of the Landlord: IBAN NL91 ABNA 0417 1643 00, tax number 7701456982.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 12,
+     "side": "b",
+     "before": "5.1. Арендная плата вносится на счёт Арендодателя: IBAN NL91 ABNA 0417 1643 00, налоговый номер 7701456982.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 13,
+     "side": "a",
+     "before": "6.1. This Agreement is made in Russian and English. In case of discrepancy the Russian version shall prevail.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 13,
+     "side": "b",
+     "before": "6.1. Договор составлен на русском и английском языках. При расхождениях преимущество имеет текст на русском языке.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 14,
+     "side": "a",
+     "before": "6.2. The premises shall be returned on 30 June 2028 in the condition recorded in the handover certificate.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    },
+    {
+     "operator": "drop",
+     "row": 14,
+     "side": "b",
+     "before": "6.2. Помещение подлежит возврату 30 июня 2028 года в состоянии, зафиксированном в акте приёма-передачи.",
+     "after": "",
+     "expected": [
+      "BI007"
+     ],
+     "caught_expected": true,
+     "caught_any": true,
+     "top_severity": "error",
+     "rules": [
+      "BI007"
+     ]
+    }
+   ],
+   "pairing": {
+    "right": 15,
+    "total": 15
+   },
+   "pairing_one_missing": {
+    "right": 28,
+    "total": 28
+   }
+  }
+ ]
+}
