@@ -1,0 +1,386 @@
+{
+  "0|7|BI001|numbers differ — ru only: 13": {
+    "verdict": "false",
+    "note": "same date; one side repeats or abbreviates a part"
+  },
+  "0|7|BI003|dates differ — en only: 13 April 2015": {
+    "verdict": "false",
+    "note": "same date; one side repeats or abbreviates a part"
+  },
+  "1|20|BI001|numbers differ — ru only: 33, 76, 20": {
+    "verdict": "real",
+    "note": "the Russian line carries contents-page numbers the English lacks"
+  },
+  "3|16|BI002|amounts differ — ru only: 475 000": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "3|25|BI001|numbers differ — ru only: 2011, 1, 2011, 1": {
+    "verdict": "real",
+    "note": "the two lines are different text"
+  },
+  "4|15|BI001|numbers differ — en only: 2016, 2017": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "4|15|BI005|durations differ — ru only: 20162017": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "5|25|BI001|numbers differ — en only: 5": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "6|8|BI001|numbers differ — ru only: 1540": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "7|11|BI001|numbers differ — ru only: 3, 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "7|11|BI003|dates differ — en only: 3 March 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "8|28|BI005|durations differ — en only: 10": {
+    "verdict": "false",
+    "note": "digits against words"
+  },
+  "11|0|BI003|times differ — ru only: 18 ч. 55 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "11|0|BI005|durations differ — en only: 1855": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "13|1|BI001|numbers differ — en only: 2": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "14|37|BI005|durations differ — ru only: 2015": {
+    "verdict": "false",
+    "note": "post-2015 against the period after 2015"
+  },
+  "15|10|BI001|numbers differ — en only: 16": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "17|0|BI001|numbers differ — en only: 2, 7": {
+    "verdict": "real",
+    "note": "the English line carries a contents-page number the Russian lacks"
+  },
+  "18|27|BI001|numbers differ — en only: 1115": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "18|27|BI003|times differ — ru only: 11 ч. 15 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "19|29|BI001|numbers differ — en only: 1": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "21|1|BI001|numbers differ — en only: 2014": {
+    "verdict": "real",
+    "note": "the year 2014 of the advisory is absent from the Russian"
+  },
+  "21|32|BI005|durations differ — en only: 10": {
+    "verdict": "false",
+    "note": "digits against words"
+  },
+  "22|14|BI003|dates differ — ru only: 1 июля 2015, 30 июня 2016": {
+    "verdict": "real",
+    "note": "the English line stops before the dates"
+  },
+  "24|0|BI001|numbers differ — en only: 1": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "26|14|BI001|numbers differ — en only: 5, 3": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "26|39|BI001|numbers differ — en only: 14, 2015": {
+    "verdict": "false",
+    "note": "same date; one side repeats or abbreviates a part"
+  },
+  "26|39|BI003|dates differ — ru only: 14 мая 2015": {
+    "verdict": "false",
+    "note": "same date; one side repeats or abbreviates a part"
+  },
+  "26|39|BI003|times differ — ru only: 09 ч. 40 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "26|39|BI005|durations differ — en only: 0940": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "27|1|BI001|numbers differ — en only: 59, 20": {
+    "verdict": "false",
+    "note": "digits against words"
+  },
+  "28|17|BI001|numbers differ — en only: 2": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "28|26|BI001|numbers differ — en only: 2": {
+    "verdict": "false",
+    "note": "annex 2 against the Roman numeral"
+  },
+  "28|28|BI001|numbers differ — en only: 2014": {
+    "verdict": "false",
+    "note": "one side repeats a value the other refers back to"
+  },
+  "29|8|BI001|numbers differ — en only: 2012": {
+    "verdict": "real",
+    "note": "September 2012 is absent from the Russian"
+  },
+  "30|19|BI003|times differ — ru only: 10 ч. 50 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "30|19|BI005|durations differ — en only: 1050": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "36|13|BI001|numbers differ — en only: 9": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "37|22|BI001|numbers differ — ru only: 2014, 8": {
+    "verdict": "real",
+    "note": "the English line stops before the report symbol"
+  },
+  "38|18|BI002|amounts differ — ru only: 315 144": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "39|1|BI001|numbers differ — en only: 5": {
+    "verdict": "real",
+    "note": "the post level P-5 is absent from the Russian"
+  },
+  "39|30|BI001|numbers differ — en only: 3 · ru only: 2": {
+    "verdict": "false",
+    "note": "digits against words"
+  },
+  "45|7|BI001|numbers differ — en only: 13, 2015": {
+    "verdict": "false",
+    "note": "same date; one side repeats or abbreviates a part"
+  },
+  "45|7|BI003|dates differ — ru only: 13 мая 2015": {
+    "verdict": "false",
+    "note": "same date; one side repeats or abbreviates a part"
+  },
+  "45|7|BI003|times differ — ru only: 19 ч. 30 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "45|7|BI005|durations differ — en only: 1930": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "46|37|BI005|durations differ — en only: 10": {
+    "verdict": "false",
+    "note": "digits against words"
+  },
+  "47|27|BI001|numbers differ — en only: 22, 14": {
+    "verdict": "false",
+    "note": "same date; one side repeats or abbreviates a part"
+  },
+  "47|27|BI003|dates differ — ru only: 22 октября 2014": {
+    "verdict": "false",
+    "note": "same date; one side repeats or abbreviates a part"
+  },
+  "48|5|BI001|numbers differ — ru only: 11,6": {
+    "verdict": "false",
+    "note": "same figure; the line opens with it, read as a paragraph number"
+  },
+  "49|39|BI001|numbers differ — en only: 2014": {
+    "verdict": "real",
+    "note": "the year 2014 is absent from the Russian"
+  },
+  "54|34|BI001|numbers differ — en only: 23, 46": {
+    "verdict": "real",
+    "note": "the Russian line stops before the step numbers"
+  },
+  "55|8|BI001|numbers differ — ru only: 1": {
+    "verdict": "false",
+    "note": "a numeral inside a name on one side only"
+  },
+  "55|15|BI005|durations differ — ru only: 2015": {
+    "verdict": "false",
+    "note": "post-2015 against the period after 2015"
+  },
+  "56|10|BI001|numbers differ — en only: 27": {
+    "verdict": "real",
+    "note": "the Russian line is cut short and lost the day"
+  },
+  "56|16|BI001|numbers differ — ru only: 10.00, 13.00, 15.00, 18.00": {
+    "verdict": "false",
+    "note": "same clock times; Russian writes them as 10.00 - 13.00"
+  },
+  "56|16|BI003|times differ — en only: 10 a.m., 1 p.m., 3 p.m., 6 p.m.": {
+    "verdict": "false",
+    "note": "same clock times; Russian writes them as 10.00 - 13.00"
+  },
+  "56|23|BI001|numbers differ — ru only: 31": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "56|27|BI001|numbers differ — ru only: 5": {
+    "verdict": "real",
+    "note": "the two lines are different text"
+  },
+  "59|8|BI001|numbers differ — en only: 2": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "62|4|BI001|numbers differ — en only: 9": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "62|10|BI001|numbers differ — en only: 20, 2014": {
+    "verdict": "real",
+    "note": "COP 20 is absent from the Russian, and the year reads 204"
+  },
+  "62|10|BI005|durations differ — ru only: 204": {
+    "verdict": "real",
+    "note": "the Russian year reads 204 against 2014"
+  },
+  "68|16|BI001|numbers differ — en only: 25": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "69|34|BI001|numbers differ — en only: 4": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "69|35|BI001|numbers differ — en only: 3": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "70|7|BI001|numbers differ — en only: 2013": {
+    "verdict": "false",
+    "note": "one side repeats a value the other refers back to"
+  },
+  "70|23|BI001|numbers differ — en only: 2015, 2030": {
+    "verdict": "real",
+    "note": "the Russian line stops before the years 2015-2030"
+  },
+  "71|13|BI001|numbers differ — en only: 2": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "71|39|BI001|numbers differ — ru only: 10.00, 13.00, 15.00, 18.00": {
+    "verdict": "false",
+    "note": "same clock times; Russian writes them as 10.00 - 13.00"
+  },
+  "71|39|BI003|times differ — en only: 10 a.m., 1 p.m., 3 p.m., 6 p.m.": {
+    "verdict": "false",
+    "note": "same clock times; Russian writes them as 10.00 - 13.00"
+  },
+  "72|7|BI001|numbers differ — ru only: 21": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "72|27|BI001|numbers differ — en only: 20": {
+    "verdict": "false",
+    "note": "digits against words"
+  },
+  "74|6|BI001|numbers differ — ru only: 21": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "74|13|BI001|numbers differ — en only: 2": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "76|30|BI001|numbers differ — en only: 91": {
+    "verdict": "real",
+    "note": "the figure 91 is absent from the Russian"
+  },
+  "76|31|BI001|numbers differ — ru only: 5, 4": {
+    "verdict": "real",
+    "note": "the English line stops before the post levels"
+  },
+  "78|24|BI001|numbers differ — en only: 2014, 2015": {
+    "verdict": "real",
+    "note": "the Russian line stops before the years 2014-2015"
+  },
+  "80|2|BI001|numbers differ — en only: 4": {
+    "verdict": "false",
+    "note": "digits against words"
+  },
+  "80|26|BI001|numbers differ — en only: 5": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "83|14|BI001|numbers differ — en only: 14": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "83|25|BI005|durations differ — ru only: 2015": {
+    "verdict": "false",
+    "note": "post-2015 against the period after 2015"
+  },
+  "84|20|BI001|numbers differ — en only: 4, 11": {
+    "verdict": "real",
+    "note": "the English line carries a contents-page number the Russian lacks"
+  },
+  "87|37|BI005|durations differ — en only: 10": {
+    "verdict": "false",
+    "note": "digits against words"
+  },
+  "88|15|BI001|numbers differ — en only: 3.7": {
+    "verdict": "real",
+    "note": "the figure 3.7 for Venezuela is absent from the Russian"
+  },
+  "90|17|BI001|numbers differ — en only: 2, 5, 4, 5, 2, 4": {
+    "verdict": "false",
+    "note": "same value; a hyphen is lost or a word is glued to the number"
+  },
+  "94|36|BI002|amounts differ — ru only: 1": {
+    "verdict": "false",
+    "note": "one side repeats a value the other refers back to"
+  },
+  "94|37|BI003|times differ — ru only: 17 ч. 20 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "94|37|BI005|durations differ — en only: 1720": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "94|38|BI003|times differ — ru only: 18 ч. 45 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "94|38|BI005|durations differ — en only: 1845": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "95|25|BI001|numbers differ — ru only: 22, 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "95|25|BI003|dates differ — en only: 22 April 2015": {
+    "verdict": "false",
+    "note": "identical text on both sides, left in English"
+  },
+  "97|29|BI001|numbers differ — ru only: 1": {
+    "verdict": "false",
+    "note": "one side repeats a value the other refers back to"
+  },
+  "99|15|BI001|numbers differ — en only: 2": {
+    "verdict": "false",
+    "note": "footnote mark attached differently"
+  },
+  "99|38|BI001|numbers differ — en only: 136": {
+    "verdict": "false",
+    "note": "digits against words"
+  }
+}
