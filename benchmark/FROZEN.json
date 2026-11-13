@@ -1,0 +1,8 @@
+{
+  "frozen_on": "2026-11-13",
+  "mutate_sha256": "e7c9d48c0f39983fd7adc99bc59812ae28ce62e39c826578bbbfab100f589d7f",
+  "archive": "UNv1.0.testsets.tar.gz",
+  "archive_sha256": "0b4040d723eab132fadc7809a329a4787b338a424ef23bfe3e029d41b7e0153d",
+  "devset_sha256": "492c6a3c1af551d38866fc89f0fad82be817d747dbf15fd324897175778ee96b",
+  "testset_sha256": "f1106e4bc853194ec1517e7d1162eee4e3ebf72fcad2b082b06ff9572881b835"
+}
