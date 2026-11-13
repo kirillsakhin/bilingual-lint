@@ -10,11 +10,12 @@ import tempfile
 from collections import defaultdict
 from pathlib import Path
 
+from docx import Document as new_docx
+
 from bilingual_lint.config import Config
 from bilingual_lint.loaders import load
 from bilingual_lint.rules import run_all
 from bilingual_lint.segment import refine
-from docx import Document as new_docx
 
 from .mutate import OPERATORS, all_mutations
 
