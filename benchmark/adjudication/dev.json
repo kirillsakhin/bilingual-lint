@@ -718,5 +718,45 @@
   "99|14|BI001|numbers differ — ru only: 1": {
     "verdict": "false",
     "note": "Daiichi against the numeral 1 in the plant's name"
+  },
+  "6|5|BI003|times differ — en only: 10.10 a.m. · ru only: 10 ч. 00 м.": {
+    "verdict": "real",
+    "note": "the two versions give different times: 10.10 a.m. / 10 ч. 00 м."
+  },
+  "19|32|BI001|numbers differ — en only: 0300": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "19|32|BI003|times differ — ru only: 03 ч. 00 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "59|14|BI001|numbers differ — en only: 1310": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "59|14|BI003|times differ — ru only: 13 ч. 10 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "72|7|BI003|times differ — en only: 3 p.m., 6 p.m.": {
+    "verdict": "real",
+    "note": "the Russian line stops before the afternoon times"
+  },
+  "75|13|BI003|times differ — ru only: 00 ч. 00 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "75|13|BI005|durations differ — en only: 0000": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "95|23|BI001|numbers differ — en only: 1100": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
+  },
+  "95|23|BI003|times differ — ru only: 11 ч. 00 м., 12 ч. 00 м.": {
+    "verdict": "false",
+    "note": "same clock time; English writes it as four digits"
   }
 }

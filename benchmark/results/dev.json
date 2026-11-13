@@ -1,7 +1,7 @@
 {
  "part": "dev",
  "scored_on": "2026-11-13",
- "commit": "273be5633cf38d2ac4519335d8b246d869ddc3a3",
+ "commit": "a924afc7a262d2a1f2aa7353ec4e5ee49c3b3b21",
  "version": "0.1.1",
  "seed": 20261113,
  "limit": null,
@@ -72,7 +72,7 @@
    "recall": 1.0
   },
   "clean_flags_per_100_pairs": {
-   "error": 4.5,
+   "error": 2.7,
    "warning": 4.15,
    "info": 6.67
   },
@@ -80,11 +80,11 @@
   "pairing_accuracy_one_missing": 0.9862
  },
  "adjudication": {
-  "error_findings": 180,
+  "error_findings": 108,
   "real": 22,
-  "false": 158,
+  "false": 86,
   "open": 0,
-  "false_per_100_pairs": 3.95
+  "false_per_100_pairs": 2.15
  },
  "targets": [
   [
@@ -101,9 +101,9 @@
   ],
   [
    "error_flags_per_100_pairs",
-   3.95,
+   2.15,
    3.0,
-   false
+   true
   ],
   [
    "pairing_accuracy",
@@ -121,18 +121,6 @@
      "error",
      5,
      "numbers differ — en only: 100,000 · ru only: 10 000"
-    ],
-    [
-     "BI001",
-     "error",
-     19,
-     "numbers differ — ru only: 11, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     19,
-     "times differ — en only: 11 a.m."
     ],
     [
      "BI006",
@@ -425,7 +413,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -447,7 +436,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -1930,20 +1920,8 @@
     [
      "BI001",
      "error",
-     0,
-     "numbers differ — en only: 12.40 · ru only: 12, 40"
-    ],
-    [
-     "BI001",
-     "error",
      16,
      "numbers differ — en only: 2020"
-    ],
-    [
-     "BI001",
-     "error",
-     17,
-     "numbers differ — en only: 10.23 · ru only: 10, 23"
     ],
     [
      "BI010",
@@ -3842,12 +3820,6 @@
      "numbers differ — ru only: 70"
     ],
     [
-     "BI001",
-     "error",
-     34,
-     "numbers differ — en only: 10.47 · ru only: 10, 47"
-    ],
-    [
      "BI010",
      "info",
      null,
@@ -5648,18 +5620,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     3,
-     "numbers differ — ru only: 15, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     3,
-     "times differ — en only: 3 p.m."
-    ],
-    [
      "BI010",
      "info",
      null,
@@ -5708,7 +5668,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -7392,12 +7353,6 @@
      "error",
      17,
      "dates differ — ru only: 5 февраля 2015"
-    ],
-    [
-     "BI001",
-     "error",
-     34,
-     "numbers differ — en only: 10.15 · ru only: 10, 15"
     ],
     [
      "BI010",
@@ -10859,28 +10814,16 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
+     "BI003",
      "error",
      5,
-     "numbers differ — en only: 10.10 · ru only: 10, 00"
+     "times differ — en only: 10.10 a.m. · ru only: 10 ч. 00 м."
     ],
     [
      "BI001",
      "error",
      10,
      "numbers differ — en only: 2014, 2015"
-    ],
-    [
-     "BI001",
-     "error",
-     20,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     20,
-     "times differ — en only: 10 a.m."
     ],
     [
      "BI006",
@@ -11069,7 +11012,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -13035,24 +12978,6 @@
      "numbers differ — en only: 1960"
     ],
     [
-     "BI001",
-     "error",
-     29,
-     "numbers differ — en only: 10.18 · ru only: 10, 18"
-    ],
-    [
-     "BI001",
-     "error",
-     32,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     32,
-     "times differ — en only: 10 a.m."
-    ],
-    [
      "BI006",
      "warning",
      3,
@@ -13473,7 +13398,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -13517,7 +13442,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -13539,7 +13465,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -20509,30 +20435,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     7,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     7,
-     "times differ — en only: 10 a.m."
-    ],
-    [
-     "BI001",
-     "error",
-     13,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     13,
-     "times differ — en only: 10 a.m."
-    ],
-    [
      "BI006",
      "warning",
      0,
@@ -20820,7 +20722,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -22540,18 +22443,6 @@
   {
    "pairs": 40,
    "clean_findings": [
-    [
-     "BI001",
-     "error",
-     33,
-     "numbers differ — ru only: 18, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     33,
-     "times differ — en only: 6 p.m."
-    ],
     [
      "BI006",
      "warning",
@@ -24829,42 +24720,6 @@
     [
      "BI001",
      "error",
-     0,
-     "numbers differ — ru only: 15, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     0,
-     "times differ — en only: 3 p.m."
-    ],
-    [
-     "BI001",
-     "error",
-     5,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     5,
-     "times differ — en only: 10 a.m."
-    ],
-    [
-     "BI001",
-     "error",
-     15,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     15,
-     "times differ — en only: 10 a.m."
-    ],
-    [
-     "BI001",
-     "error",
      31,
      "numbers differ — ru only: 1,5"
     ],
@@ -25036,7 +24891,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -25058,7 +24914,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -25260,7 +25116,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -25282,7 +25139,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -27368,12 +27225,6 @@
   {
    "pairs": 40,
    "clean_findings": [
-    [
-     "BI001",
-     "error",
-     14,
-     "numbers differ — en only: 3.35 · ru only: 15, 35"
-    ],
     [
      "BI010",
      "info",
@@ -29517,30 +29368,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     23,
-     "numbers differ — ru only: 15, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     23,
-     "times differ — en only: 3 p.m."
-    ],
-    [
-     "BI001",
-     "error",
-     32,
-     "numbers differ — ru only: 17, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     32,
-     "times differ — en only: 5 p.m."
-    ],
-    [
      "BI006",
      "warning",
      8,
@@ -30035,7 +29862,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -31448,18 +31275,6 @@
   {
    "pairs": 40,
    "clean_findings": [
-    [
-     "BI001",
-     "error",
-     34,
-     "numbers differ — ru only: 18, 15"
-    ],
-    [
-     "BI003",
-     "error",
-     34,
-     "times differ — en only: 6:15 p.m."
-    ],
     [
      "BI001",
      "error",
@@ -33618,36 +33433,6 @@
     [
      "BI001",
      "error",
-     2,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     2,
-     "times differ — en only: 10 a.m."
-    ],
-    [
-     "BI001",
-     "error",
-     9,
-     "numbers differ — en only: 12.23 · ru only: 12, 23"
-    ],
-    [
-     "BI001",
-     "error",
-     14,
-     "numbers differ — ru only: 15, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     14,
-     "times differ — en only: 3 p.m."
-    ],
-    [
-     "BI001",
-     "error",
      20,
      "numbers differ — ru only: 6"
     ],
@@ -33765,7 +33550,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -33988,7 +33773,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -34120,7 +33905,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -38244,26 +38029,14 @@
     [
      "BI001",
      "error",
-     14,
-     "numbers differ — en only: 10.30 · ru only: 10, 30"
-    ],
-    [
-     "BI001",
-     "error",
      32,
-     "numbers differ — en only: 0300 · ru only: 03, 00"
-    ],
-    [
-     "BI001",
-     "error",
-     37,
-     "numbers differ — ru only: 10, 00"
+     "numbers differ — en only: 0300"
     ],
     [
      "BI003",
      "error",
-     37,
-     "times differ — en only: 10 a.m."
+     32,
+     "times differ — ru only: 03 ч. 00 м."
     ],
     [
      "BI010",
@@ -38650,7 +38423,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -38738,7 +38511,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -40118,12 +39891,6 @@
      "durations differ — ru only: 50"
     ],
     [
-     "BI001",
-     "error",
-     9,
-     "numbers differ — en only: 10.07 · ru only: 10, 07"
-    ],
-    [
      "BI006",
      "warning",
      11,
@@ -40309,7 +40076,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -41953,30 +41720,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     12,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     12,
-     "times differ — en only: 10 a.m."
-    ],
-    [
-     "BI001",
-     "error",
-     14,
-     "numbers differ — ru only: 15, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     14,
-     "times differ — en only: 3 p.m."
-    ],
-    [
      "BI006",
      "warning",
      16,
@@ -42380,7 +42123,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -42446,7 +42190,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -44147,30 +43891,6 @@
     [
      "BI001",
      "error",
-     3,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     3,
-     "times differ — en only: 10 a.m."
-    ],
-    [
-     "BI001",
-     "error",
-     12,
-     "numbers differ — ru only: 15, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     12,
-     "times differ — en only: 3 p.m."
-    ],
-    [
-     "BI001",
-     "error",
      14,
      "numbers differ — ru only: 2011"
     ],
@@ -44179,24 +43899,6 @@
      "error",
      14,
      "durations differ — ru only: 2012"
-    ],
-    [
-     "BI001",
-     "error",
-     25,
-     "numbers differ — en only: 10.15 · ru only: 10, 15"
-    ],
-    [
-     "BI001",
-     "error",
-     26,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     26,
-     "times differ — en only: 10 a.m."
     ],
     [
      "BI006",
@@ -44306,7 +44008,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -44328,7 +44031,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -44792,7 +44496,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -44836,7 +44540,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -54166,12 +53870,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     19,
-     "numbers differ — en only: 9.30 · ru only: 09, 30"
-    ],
-    [
      "BI006",
      "warning",
      11,
@@ -54514,7 +54212,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -59940,18 +59639,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     28,
-     "numbers differ — ru only: 10, 00, 13, 00, 15, 00, 18, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     28,
-     "times differ — en only: 10 a.m., 1 p.m., 3 p.m., 6 p.m."
-    ],
-    [
      "BI006",
      "warning",
      12,
@@ -60344,7 +60031,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -71830,18 +71518,6 @@
      "numbers differ — ru only: 45 000"
     ],
     [
-     "BI001",
-     "error",
-     38,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     38,
-     "times differ — en only: 10 a.m."
-    ],
-    [
      "BI006",
      "warning",
      39,
@@ -72546,7 +72222,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -76035,30 +75712,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     7,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     7,
-     "times differ — en only: 10 a.m."
-    ],
-    [
-     "BI001",
-     "error",
-     31,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     31,
-     "times differ — en only: 10 a.m."
-    ],
-    [
      "BI006",
      "warning",
      21,
@@ -76613,7 +76266,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -78102,24 +77756,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     9,
-     "numbers differ — en only: 10.44 · ru only: 10, 44"
-    ],
-    [
-     "BI001",
-     "error",
-     11,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     11,
-     "times differ — en only: 10 a.m."
-    ],
-    [
      "BI005",
      "error",
      17,
@@ -78314,7 +77950,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -78336,7 +77972,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -78358,7 +77995,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -84109,12 +83746,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     17,
-     "numbers differ — en only: 3.05 · ru only: 15, 05"
-    ],
-    [
      "BI005",
      "error",
      33,
@@ -84489,7 +84120,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -103818,18 +103450,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     38,
-     "numbers differ — ru only: 11, 00, 13, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     38,
-     "times differ — en only: 11 a.m., 1 p.m."
-    ],
-    [
      "BI006",
      "warning",
      10,
@@ -104355,7 +103975,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -113775,18 +113395,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     35,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     35,
-     "times differ — en only: 10 a.m."
-    ],
-    [
      "BI002",
      "warning",
      16,
@@ -118187,7 +117795,13 @@
      "BI001",
      "error",
      14,
-     "numbers differ — en only: 1310 · ru only: 13, 10"
+     "numbers differ — en only: 1310"
+    ],
+    [
+     "BI003",
+     "error",
+     14,
+     "times differ — ru only: 13 ч. 10 м."
     ],
     [
      "BI001",
@@ -120287,18 +119901,6 @@
     [
      "BI001",
      "error",
-     8,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     8,
-     "times differ — en only: 10 a.m."
-    ],
-    [
-     "BI001",
-     "error",
      21,
      "numbers differ — en only: 1, 2"
     ],
@@ -120475,7 +120077,8 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI001",
+      "BI003"
      ]
     },
     {
@@ -142601,16 +142204,10 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     7,
-     "numbers differ — ru only: 10, 00, 13, 00"
-    ],
-    [
      "BI003",
      "error",
      7,
-     "times differ — en only: 10 a.m., 1 p.m., 3 p.m., 6 p.m."
+     "times differ — en only: 3 p.m., 6 p.m."
     ],
     [
      "BI006",
@@ -142796,7 +142393,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -146526,18 +146123,6 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
-     "error",
-     22,
-     "numbers differ — ru only: 10, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     22,
-     "times differ — en only: 10 a.m."
-    ],
-    [
      "BI010",
      "info",
      null,
@@ -146812,7 +146397,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
@@ -148284,10 +147869,16 @@
    "pairs": 40,
    "clean_findings": [
     [
-     "BI001",
+     "BI003",
      "error",
      13,
-     "numbers differ — ru only: 00"
+     "times differ — ru only: 00 ч. 00 м."
+    ],
+    [
+     "BI005",
+     "error",
+     13,
+     "durations differ — en only: 0000"
     ],
     [
      "BI010",
@@ -189268,7 +188859,13 @@
      "BI001",
      "error",
      23,
-     "numbers differ — en only: 1100 · ru only: 11, 00, 12, 00"
+     "numbers differ — en only: 1100"
+    ],
+    [
+     "BI003",
+     "error",
+     23,
+     "times differ — ru only: 11 ч. 00 м., 12 ч. 00 м."
     ],
     [
      "BI005",
@@ -194627,18 +194224,6 @@
      "numbers differ — en only: 2013"
     ],
     [
-     "BI001",
-     "error",
-     25,
-     "numbers differ — ru only: 15, 00"
-    ],
-    [
-     "BI003",
-     "error",
-     25,
-     "times differ — en only: 3 p.m."
-    ],
-    [
      "BI006",
      "warning",
      2,
@@ -194944,7 +194529,7 @@
      "caught_any": true,
      "top_severity": "error",
      "rules": [
-      "BI001"
+      "BI003"
      ]
     },
     {
