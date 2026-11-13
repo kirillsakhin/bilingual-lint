@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.2 — 2026-11-13
 
 - Benchmark published: planted-defect recall, false flags on clean text and
   two-file pairing, measured on the United Nations Parallel Corpus v1.0 and on
