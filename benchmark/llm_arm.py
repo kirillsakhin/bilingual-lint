@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import time
 
 from .mutate import OPERATORS, all_mutations
 
@@ -55,6 +56,20 @@ def litellm_complete(model: str, timeout: int = 120):
         return response.choices[0].message.content
 
     return complete
+
+
+def with_retries(complete, attempts: int = 6, pause: float = 30.0, sleep=time.sleep):
+    """Wrap complete(system, user) so a failed call is sent again after a pause
+    that grows with each attempt. The last failure is raised."""
+    def retrying(system: str, user: str) -> str:
+        for attempt in range(1, attempts):
+            try:
+                return complete(system, user)
+            except Exception:
+                sleep(pause * attempt)
+        return complete(system, user)
+
+    return retrying
 
 
 def review(rows: list, complete, langs: tuple = ("en", "ru")) -> set | None:

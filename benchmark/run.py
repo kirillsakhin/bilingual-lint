@@ -127,7 +127,7 @@ def run_llm(part: str, data: Path | None, llm_docs: int, model: str, out: Path,
         return 2
     docs, parties, data_hash = load_documents(part, data)
     docs, parties = docs[:llm_docs], parties[:llm_docs]
-    complete = complete or llm_arm.litellm_complete(model)
+    complete = complete or llm_arm.with_retries(llm_arm.litellm_complete(model))
     model_results, linter_results = [], []
     for number, (rows, names) in enumerate(zip(docs, parties, strict=True), start=1):
         model_results.append(llm_arm.compare_document(rows, SEED, complete, names))

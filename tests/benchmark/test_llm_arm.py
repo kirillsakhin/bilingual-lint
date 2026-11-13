@@ -68,3 +68,27 @@ def test_summarise_gives_recall_per_operator_and_the_noise_rate():
     assert summary["extra_rows_named_per_mutated_copy"] == 0
     digit = summary["operators"]["digit"]
     assert digit["recall"] == 1.0 and digit["excluded"] >= 1
+
+
+def test_a_failed_call_is_sent_again_after_a_growing_pause():
+    calls, pauses = [], []
+
+    def flaky(system, user):
+        calls.append(user)
+        if len(calls) < 3:
+            raise RuntimeError("overloaded")
+        return "ok"
+
+    complete = llm_arm.with_retries(flaky, attempts=4, pause=10, sleep=pauses.append)
+    assert complete("s", "u") == "ok"
+    assert len(calls) == 3
+    assert pauses == [10, 20]
+
+
+def test_the_last_failure_is_raised():
+    def broken(system, user):
+        raise RuntimeError("down")
+
+    complete = llm_arm.with_retries(broken, attempts=3, pause=1, sleep=lambda s: None)
+    with pytest.raises(RuntimeError, match="down"):
+        complete("s", "u")
